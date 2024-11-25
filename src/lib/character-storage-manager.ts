@@ -5,11 +5,13 @@ export const getCharacters = (): Character[] => {
   const characters = localStorage.getItem(LOCALSTORAGE_KEY);
   return characters ? JSON.parse(characters) : [];
 };
+
 export const addCharacter = async (character: Character) => {
   const characters = getCharacters();
   characters.push(character);
   localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(characters));
 };
+
 export const editCharacter = async (character: Character) => {
   const characters = getCharacters();
   const index = characters.findIndex(
