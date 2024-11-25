@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Character } from "../types/character";
+import { Character, CharacterSpec } from "../types/character";
 import { ClassSelectOptions } from "../types/class-select-options";
 import { getClassByName, Paladin } from "../types/classes";
 import { Button } from "./ui/button";
@@ -45,6 +45,10 @@ const hasAllowedSpec = (character: Character, specName: string) => {
   );
 };
 
+const hasSpecSelected = (character: Character, specName: string): boolean => {
+  return character.specs.some((spec) => spec.specName === specName);
+};
+
 const CharacterDialog = (props: Props) => {
   const { children, character } = props;
   const [characterToEdit, setCharacterToEdit] = React.useState<Character>(
@@ -56,7 +60,25 @@ const CharacterDialog = (props: Props) => {
     setCharacterToEdit({
       ...characterToEdit,
       characterClass,
+      specs: [],
     });
+  };
+
+  const handleSpecSelect = (specName: "Tank" | "Healer" | "Dps") => {
+    const spec: CharacterSpec = { specName };
+    if (hasSpecSelected(characterToEdit, specName)) {
+      setCharacterToEdit({
+        ...characterToEdit,
+        specs: characterToEdit.specs.filter(
+          (spec) => spec.specName !== specName,
+        ),
+      });
+    } else {
+      setCharacterToEdit({
+        ...characterToEdit,
+        specs: [...characterToEdit.specs, spec],
+      });
+    }
   };
 
   return (
@@ -78,6 +100,12 @@ const CharacterDialog = (props: Props) => {
               id="name"
               className="col-span-3"
               defaultValue={characterToEdit.characterName}
+              onChange={(event) =>
+                setCharacterToEdit({
+                  ...characterToEdit,
+                  characterName: event.currentTarget.value,
+                })
+              }
             />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
@@ -87,6 +115,12 @@ const CharacterDialog = (props: Props) => {
             <Input
               id="discord-tag"
               className="col-span-3"
+              onChange={(event) =>
+                setCharacterToEdit({
+                  ...characterToEdit,
+                  discordTag: event.currentTarget.value,
+                })
+              }
               defaultValue={characterToEdit.discordTag}
             />
           </div>
@@ -110,7 +144,11 @@ const CharacterDialog = (props: Props) => {
               <span className={"flex items-center gap-2"}>
                 <Label>TANK</Label>{" "}
                 <Checkbox
-                  id="dps-checkbox"
+                  checked={hasSpecSelected(characterToEdit, "Tank")}
+                  id="tank-checkbox"
+                  onCheckedChange={() => {
+                    handleSpecSelect("Tank");
+                  }}
                   disabled={!hasAllowedSpec(characterToEdit, "Tank")}
                 />
               </span>
@@ -119,8 +157,12 @@ const CharacterDialog = (props: Props) => {
               <span className={"flex items-center gap-2"}>
                 <Label>HEAL</Label>{" "}
                 <Checkbox
-                  id="dps-checkbox"
+                  checked={hasSpecSelected(characterToEdit, "Healer")}
+                  id="heal-checkbox"
                   disabled={!hasAllowedSpec(characterToEdit, "Healer")}
+                  onCheckedChange={() => {
+                    handleSpecSelect("Healer");
+                  }}
                 />
               </span>
             </div>
@@ -128,8 +170,12 @@ const CharacterDialog = (props: Props) => {
               <span className={"flex items-center gap-2"}>
                 <Label>DPS</Label>{" "}
                 <Checkbox
+                  checked={hasSpecSelected(characterToEdit, "Dps")}
                   id="dps-checkbox"
                   disabled={!hasAllowedSpec(characterToEdit, "Dps")}
+                  onCheckedChange={() => {
+                    handleSpecSelect("Dps");
+                  }}
                 />
               </span>
             </div>
