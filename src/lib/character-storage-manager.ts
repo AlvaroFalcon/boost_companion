@@ -25,5 +25,6 @@ export const deleteCharacter = async (character: Character) => {
     (c) => c.characterName === character.characterName,
   );
   characters.splice(index, 1);
+  // TODO: need to remove from parties, whenever it exists
   localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(characters));
 };

@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="fix: remove not needed index">
-      <change afterPath="$PROJECT_DIR$/src/lib/character-storage-manager.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/character-dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/character-dialog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/character.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/character.ts" afterDir="false" />
+    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="feat: added character storage manager to save characters properly">
+      <change beforePath="$PROJECT_DIR$/src/lib/character-storage-manager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/character-storage-manager.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +75,7 @@
       <workItem from="1730451456269" duration="3289000" />
       <workItem from="1732296779065" duration="109000" />
       <workItem from="1732296892149" duration="14752000" />
-      <workItem from="1732533776904" duration="9185000" />
+      <workItem from="1732533776904" duration="9268000" />
     </task>
     <task id="LOCAL-00001" summary="first commit :rocket:">
       <option name="closed" value="true" />
@@ -128,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732542132083</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat: added character storage manager to save characters properly">
+      <option name="closed" value="true" />
+      <created>1732544236124</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732544236124</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +157,7 @@
     <MESSAGE value="feat: properly saving checkbox states" />
     <MESSAGE value="feat: remove charName and add keystone config" />
     <MESSAGE value="fix: remove not needed index" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: remove not needed index" />
+    <MESSAGE value="feat: added character storage manager to save characters properly" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: added character storage manager to save characters properly" />
   </component>
 </project>
