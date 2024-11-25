@@ -16,6 +16,7 @@ export const editCharacter = async (character: Character) => {
     (c) => c.characterName === character.characterName,
   );
   characters[index] = character;
+  // TODO: update parties wherever this character is
   localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(characters));
 };
 
