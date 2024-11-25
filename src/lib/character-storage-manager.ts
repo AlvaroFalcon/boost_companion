@@ -1,18 +1,23 @@
+"use client";
 import { Character } from "../types/character";
 const LOCALSTORAGE_KEY = "characters";
 
 export const getCharacters = (): Character[] => {
+  if (typeof window === "undefined") return [];
   const characters = localStorage.getItem(LOCALSTORAGE_KEY);
   return characters ? JSON.parse(characters) : [];
 };
 
-export const addCharacter = async (character: Character) => {
+export const addCharacter = (character: Character) => {
+  if (typeof window === "undefined") return;
+  console.log("added");
   const characters = getCharacters();
   characters.push(character);
   localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(characters));
 };
 
-export const editCharacter = async (character: Character) => {
+export const editCharacter = (character: Character) => {
+  if (typeof window === "undefined") return;
   const characters = getCharacters();
   const index = characters.findIndex(
     (c) => c.characterName === character.characterName,
@@ -22,7 +27,8 @@ export const editCharacter = async (character: Character) => {
   localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(characters));
 };
 
-export const deleteCharacter = async (character: Character) => {
+export const deleteCharacter = (character: Character) => {
+  if (typeof window === "undefined") return;
   const characters = getCharacters();
   const index = characters.findIndex(
     (c) => c.characterName === character.characterName,

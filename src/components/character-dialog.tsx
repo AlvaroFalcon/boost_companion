@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { addCharacter, editCharacter } from "../lib/character-storage-manager";
 import { Character, CharacterSpec, KeystoneName } from "../types/character";
 import { ClassSelectOptions } from "../types/class-select-options";
 import { getClassByName, Paladin } from "../types/classes";
@@ -91,6 +92,15 @@ const CharacterDialog = (props: Props) => {
       });
     }
   };
+
+  const handleSubmit = () => {
+    if (character) {
+      editCharacter(characterToEdit);
+      return;
+    }
+    addCharacter(characterToEdit);
+  };
+
   return (
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
@@ -227,7 +237,9 @@ const CharacterDialog = (props: Props) => {
           </div>
         </div>
         <DialogFooter>
-          <Button type="submit">Save changes</Button>
+          <Button type="submit" onClick={handleSubmit}>
+            Save changes
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
