@@ -24,6 +24,7 @@ type MythicKeystone = {
 };
 
 export type Character = {
+  characterName: string;
   characterClass: CharacterClass;
   specs: CharacterSpec[];
   discordTag: string;

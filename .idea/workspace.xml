@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="feat: properly saving checkbox states">
-      <change afterPath="$PROJECT_DIR$/src/types/keystone-select-options.ts" afterDir="false" />
+    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="fix: remove not needed index">
+      <change afterPath="$PROJECT_DIR$/src/lib/character-storage-manager.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/character-dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/character-dialog.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/character.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/character.ts" afterDir="false" />
@@ -78,7 +78,7 @@
       <workItem from="1730451456269" duration="3289000" />
       <workItem from="1732296779065" duration="109000" />
       <workItem from="1732296892149" duration="14752000" />
-      <workItem from="1732533776904" duration="7289000" />
+      <workItem from="1732533776904" duration="9185000" />
     </task>
     <task id="LOCAL-00001" summary="first commit :rocket:">
       <option name="closed" value="true" />
@@ -112,7 +112,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732540217181</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: remove charName and add keystone config">
+      <option name="closed" value="true" />
+      <created>1732542104428</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732542104428</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix: remove not needed index">
+      <option name="closed" value="true" />
+      <created>1732542132083</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732542132083</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +150,8 @@
     <MESSAGE value="feat: hover card" />
     <MESSAGE value="feat: update dialog values in state" />
     <MESSAGE value="feat: properly saving checkbox states" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: properly saving checkbox states" />
+    <MESSAGE value="feat: remove charName and add keystone config" />
+    <MESSAGE value="fix: remove not needed index" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: remove not needed index" />
   </component>
 </project>

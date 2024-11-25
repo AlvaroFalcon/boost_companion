@@ -31,6 +31,7 @@ type Props = {
 };
 
 const newCharacter: Character = {
+  characterName: "",
   characterClass: Paladin,
   specs: [],
   discordTag: "",
@@ -101,6 +102,22 @@ const CharacterDialog = (props: Props) => {
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="username" className="text-right">
+              Character name
+            </Label>
+            <Input
+              id="discord-tag"
+              className="col-span-3"
+              onChange={(event) =>
+                setCharacterToEdit({
+                  ...characterToEdit,
+                  characterName: event.currentTarget.value,
+                })
+              }
+              defaultValue={characterToEdit.discordTag}
+            />
+          </div>
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="username" className="text-right">
               Discord tag
