@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="feat: hover card" />
+    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="feat: hover card">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/character-dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/character-dialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/character.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/character.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/class-select-options.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/class-select-options.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/classes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/classes.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,7 +78,8 @@
       <workItem from="1729280973937" duration="851000" />
       <workItem from="1730451456269" duration="3289000" />
       <workItem from="1732296779065" duration="109000" />
-      <workItem from="1732296892149" duration="14504000" />
+      <workItem from="1732296892149" duration="14752000" />
+      <workItem from="1732533776904" duration="3988000" />
     </task>
     <task id="LOCAL-00001" summary="first commit :rocket:">
       <option name="closed" value="true" />

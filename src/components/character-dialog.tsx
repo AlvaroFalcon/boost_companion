@@ -1,6 +1,8 @@
-import { Plus } from "lucide-react";
+"use client";
 import React from "react";
+import { Character } from "../types/character";
 import { ClassSelectOptions } from "../types/class-select-options";
+import { getClassByName, Paladin } from "../types/classes";
 import { Button } from "./ui/button";
 import { Checkbox } from "./ui/checkbox";
 import {
@@ -24,10 +26,39 @@ import {
 
 type Props = {
   children: React.ReactNode;
+  character?: Character;
+};
+
+const newCharacter: Character = {
+  characterName: "",
+  characterClass: Paladin,
+  specs: [],
+  discordTag: "",
+  key: {
+    name: "SoB",
+    level: 2,
+  },
+};
+const hasAllowedSpec = (character: Character, specName: string) => {
+  return character.characterClass.allowedSpecs.some(
+    (spec) => spec.specName === specName,
+  );
 };
 
 const CharacterDialog = (props: Props) => {
-  const { children } = props;
+  const { children, character } = props;
+  const [characterToEdit, setCharacterToEdit] = React.useState<Character>(
+    character || newCharacter,
+  );
+
+  const handleClassChange = (className: string) => {
+    const characterClass = getClassByName(className);
+    setCharacterToEdit({
+      ...characterToEdit,
+      characterClass,
+    });
+  };
+
   return (
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
@@ -43,22 +74,33 @@ const CharacterDialog = (props: Props) => {
             <Label htmlFor="name" className="text-right">
               Character name
             </Label>
-            <Input id="name" className="col-span-3" />
+            <Input
+              id="name"
+              className="col-span-3"
+              defaultValue={characterToEdit.characterName}
+            />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="username" className="text-right">
               Discord tag
             </Label>
-            <Input id="discord-tag" className="col-span-3" />
+            <Input
+              id="discord-tag"
+              className="col-span-3"
+              defaultValue={characterToEdit.discordTag}
+            />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
-            <Select>
+            <Select
+              defaultValue={characterToEdit.characterClass.className}
+              onValueChange={handleClassChange}
+            >
               <SelectTrigger>
                 <SelectValue placeholder={"Class"} />
               </SelectTrigger>
               <SelectContent>
                 {ClassSelectOptions.map((option, index) => (
-                  <SelectItem key={option.label} value={index.toString()}>
+                  <SelectItem key={option.label} value={option.class.className}>
                     {option.label}
                   </SelectItem>
                 ))}
@@ -66,17 +108,29 @@ const CharacterDialog = (props: Props) => {
             </Select>
             <div>
               <span className={"flex items-center gap-2"}>
-                <Label>TANK</Label> <Checkbox id="dps-checkbox" />
+                <Label>TANK</Label>{" "}
+                <Checkbox
+                  id="dps-checkbox"
+                  disabled={!hasAllowedSpec(characterToEdit, "Tank")}
+                />
               </span>
             </div>
             <div>
               <span className={"flex items-center gap-2"}>
-                <Label>HEAL</Label> <Checkbox id="dps-checkbox" />
+                <Label>HEAL</Label>{" "}
+                <Checkbox
+                  id="dps-checkbox"
+                  disabled={!hasAllowedSpec(characterToEdit, "Healer")}
+                />
               </span>
             </div>
             <div>
               <span className={"flex items-center gap-2"}>
-                <Label>DPS</Label> <Checkbox id="dps-checkbox" />
+                <Label>DPS</Label>{" "}
+                <Checkbox
+                  id="dps-checkbox"
+                  disabled={!hasAllowedSpec(characterToEdit, "Dps")}
+                />
               </span>
             </div>
           </div>

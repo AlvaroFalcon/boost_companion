@@ -5,6 +5,7 @@ export type CharacterSpec = {
 export type CharacterClass = {
   className: string;
   armorType: "Cloth" | "Leather" | "Mail" | "Plate";
+  allowedSpecs: CharacterSpec[];
 };
 
 type MythicKeystone = {
@@ -12,7 +13,7 @@ type MythicKeystone = {
   level: number;
 };
 
-type Character = {
+export type Character = {
   characterName: string;
   characterClass: CharacterClass;
   specs: CharacterSpec[];
