@@ -126,7 +126,7 @@ const CharacterDialog = (props: Props) => {
                 <SelectValue placeholder={"Class"} />
               </SelectTrigger>
               <SelectContent>
-                {ClassSelectOptions.map((option, index) => (
+                {ClassSelectOptions.map((option) => (
                   <SelectItem key={option.label} value={option.class.className}>
                     {option.label}
                   </SelectItem>
@@ -185,7 +185,7 @@ const CharacterDialog = (props: Props) => {
                 <SelectValue placeholder={"Keystone"} />
               </SelectTrigger>
               <SelectContent>
-                {KeystoneSelectOptions.map((option, index) => (
+                {KeystoneSelectOptions.map((option) => (
                   <SelectItem key={option.label} value={option.value}>
                     {option.label}
                   </SelectItem>
