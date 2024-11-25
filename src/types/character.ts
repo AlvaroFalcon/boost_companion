@@ -8,13 +8,22 @@ export type CharacterClass = {
   allowedSpecs: CharacterSpec[];
 };
 
+export type KeystoneName =
+  | "SoB"
+  | "Ara"
+  | "COT"
+  | "GB"
+  | "MIST"
+  | "DB"
+  | "NW"
+  | "SV";
+
 type MythicKeystone = {
-  name: "SoB" | "Ara" | "COT" | "GB" | "MIST" | "DB" | "NW" | "SV";
+  name: KeystoneName;
   level: number;
 };
 
 export type Character = {
-  characterName: string;
   characterClass: CharacterClass;
   specs: CharacterSpec[];
   discordTag: string;

@@ -1,8 +1,9 @@
 "use client";
 import React from "react";
-import { Character, CharacterSpec } from "../types/character";
+import { Character, CharacterSpec, KeystoneName } from "../types/character";
 import { ClassSelectOptions } from "../types/class-select-options";
 import { getClassByName, Paladin } from "../types/classes";
+import { KeystoneSelectOptions } from "../types/keystone-select-options";
 import { Button } from "./ui/button";
 import { Checkbox } from "./ui/checkbox";
 import {
@@ -30,7 +31,6 @@ type Props = {
 };
 
 const newCharacter: Character = {
-  characterName: "",
   characterClass: Paladin,
   specs: [],
   discordTag: "",
@@ -64,6 +64,16 @@ const CharacterDialog = (props: Props) => {
     });
   };
 
+  const handleKeystoneChange = (keystoneName: KeystoneName) => {
+    setCharacterToEdit({
+      ...characterToEdit,
+      key: {
+        name: keystoneName,
+        level: characterToEdit.key.level,
+      },
+    });
+  };
+
   const handleSpecSelect = (specName: "Tank" | "Healer" | "Dps") => {
     const spec: CharacterSpec = { specName };
     if (hasSpecSelected(characterToEdit, specName)) {
@@ -80,7 +90,6 @@ const CharacterDialog = (props: Props) => {
       });
     }
   };
-
   return (
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
@@ -92,22 +101,6 @@ const CharacterDialog = (props: Props) => {
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="name" className="text-right">
-              Character name
-            </Label>
-            <Input
-              id="name"
-              className="col-span-3"
-              defaultValue={characterToEdit.characterName}
-              onChange={(event) =>
-                setCharacterToEdit({
-                  ...characterToEdit,
-                  characterName: event.currentTarget.value,
-                })
-              }
-            />
-          </div>
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="username" className="text-right">
               Discord tag
@@ -179,6 +172,41 @@ const CharacterDialog = (props: Props) => {
                 />
               </span>
             </div>
+          </div>
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="username" className="text-right">
+              Keystone
+            </Label>
+            <Select
+              defaultValue={characterToEdit.key.name}
+              onValueChange={handleKeystoneChange}
+            >
+              <SelectTrigger>
+                <SelectValue placeholder={"Keystone"} />
+              </SelectTrigger>
+              <SelectContent>
+                {KeystoneSelectOptions.map((option, index) => (
+                  <SelectItem key={option.label} value={option.value}>
+                    {option.label}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            <Input
+              type={"number"}
+              id="keystone-level"
+              className="col-span-2"
+              onChange={(event) =>
+                setCharacterToEdit({
+                  ...characterToEdit,
+                  key: {
+                    name: characterToEdit.key.name,
+                    level: parseInt(event.currentTarget.value),
+                  },
+                })
+              }
+              defaultValue={10}
+            />
           </div>
         </div>
         <DialogFooter>
