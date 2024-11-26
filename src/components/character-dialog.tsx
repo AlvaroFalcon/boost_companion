@@ -36,6 +36,7 @@ const newCharacter = (): Character => {
   return {
     id: Date.now().toString(),
     characterName: "",
+    rio: "0",
     characterClass: Paladin,
     specs: [],
     discordTag: "",
@@ -135,6 +136,22 @@ const CharacterDialog = (props: Props) => {
                 })
               }
               defaultValue={characterToEdit.characterName}
+            />
+          </div>
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="username" className="text-right">
+              RIO
+            </Label>
+            <Input
+              id="rio"
+              className="col-span-3"
+              onChange={(event) =>
+                setCharacterToEdit({
+                  ...characterToEdit,
+                  rio: event.currentTarget.value,
+                })
+              }
+              defaultValue={characterToEdit.rio}
             />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
