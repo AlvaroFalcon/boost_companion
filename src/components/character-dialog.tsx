@@ -264,7 +264,7 @@ const CharacterDialog = (props: Props) => {
           </div>
         </div>
         <DialogFooter>
-          <DialogClose>
+          <DialogClose asChild>
             <Button type="submit" onClick={handleSubmit}>
               Save changes
             </Button>
