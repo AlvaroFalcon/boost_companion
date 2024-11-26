@@ -10,6 +10,7 @@ import { Button } from "./ui/button";
 import { Checkbox } from "./ui/checkbox";
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogDescription,
   DialogFooter,
@@ -110,7 +111,7 @@ const CharacterDialog = (props: Props) => {
   return (
     <Dialog
       onOpenChange={(open) =>
-        open ? setCharacterToEdit(newCharacter()) : null
+        open ? setCharacterToEdit(character || newCharacter()) : null
       }
     >
       <DialogTrigger asChild>{children}</DialogTrigger>
@@ -263,9 +264,11 @@ const CharacterDialog = (props: Props) => {
           </div>
         </div>
         <DialogFooter>
-          <Button type="submit" onClick={handleSubmit}>
-            Save changes
-          </Button>
+          <DialogClose>
+            <Button type="submit" onClick={handleSubmit}>
+              Save changes
+            </Button>
+          </DialogClose>
         </DialogFooter>
       </DialogContent>
     </Dialog>

@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="feat: using date.now as id">
+    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="feat: basic character item styling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/characters/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/characters/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/character-dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/character-dialog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/accordion.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/accordion.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/character.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/character.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732620000939</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feat: basic character item styling">
+      <option name="closed" value="true" />
+      <created>1732632350386</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732632350386</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +213,7 @@
     <MESSAGE value="styling" />
     <MESSAGE value="feat: saving character properly" />
     <MESSAGE value="feat: using date.now as id" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: using date.now as id" />
+    <MESSAGE value="feat: basic character item styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: basic character item styling" />
   </component>
 </project>
