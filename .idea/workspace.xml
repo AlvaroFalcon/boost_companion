@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="feat: saving character properly">
-      <change afterPath="$PROJECT_DIR$/src/actions/add-character.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/edit-character.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/get-characters.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/remove-character.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/cookies-keys.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/characters/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/characters/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/character-dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/character-dialog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/character-storage-manager.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/character.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/character.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

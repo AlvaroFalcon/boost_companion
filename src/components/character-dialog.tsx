@@ -1,5 +1,4 @@
 "use client";
-import { randomUUID } from "node:crypto";
 import React from "react";
 import addCharacter from "../actions/add-character";
 import editCharacter from "../actions/edit-character";
@@ -35,7 +34,7 @@ type Props = {
 
 const newCharacter = (): Character => {
   return {
-    id: randomUUID(),
+    id: Date.now().toString(),
     characterName: "",
     characterClass: Paladin,
     specs: [],

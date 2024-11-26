@@ -4,7 +4,6 @@ import getCharacters from "../../actions/get-characters";
 
 const CharactersPage = () => {
   const characters = getCharacters();
-  console.log(characters, "characters");
   return (
     <div
       className={"flex justify-center items-center bg-gray-500 h-screen w-full"}
