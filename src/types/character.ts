@@ -24,6 +24,7 @@ type MythicKeystone = {
 };
 
 export type Character = {
+  id: string;
   characterName: string;
   characterClass: CharacterClass;
   specs: CharacterSpec[];

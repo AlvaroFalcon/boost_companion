@@ -1,10 +1,18 @@
 "use server";
 
-const CharactersPage = () => (
-  <div
-    className={"flex justify-center items-center bg-gray-500 h-screen w-full"}
-  >
-    Characters
-  </div>
-);
+import getCharacters from "../../actions/get-characters";
+
+const CharactersPage = () => {
+  const characters = getCharacters();
+  console.log(characters, "characters");
+  return (
+    <div
+      className={"flex justify-center items-center bg-gray-500 h-screen w-full"}
+    >
+      {characters.map((character) => (
+        <div key={character.characterName}>{character.characterName}</div>
+      ))}
+    </div>
+  );
+};
 export default CharactersPage;

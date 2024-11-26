@@ -1,6 +1,8 @@
 "use client";
+import { randomUUID } from "node:crypto";
 import React from "react";
-import { addCharacter, editCharacter } from "../lib/character-storage-manager";
+import addCharacter from "../actions/add-character";
+import editCharacter from "../actions/edit-character";
 import { Character, CharacterSpec, KeystoneName } from "../types/character";
 import { ClassSelectOptions } from "../types/class-select-options";
 import { getClassByName, Paladin } from "../types/classes";
@@ -31,16 +33,20 @@ type Props = {
   character?: Character;
 };
 
-const newCharacter: Character = {
-  characterName: "",
-  characterClass: Paladin,
-  specs: [],
-  discordTag: "",
-  key: {
-    name: "SoB",
-    level: 2,
-  },
+const newCharacter = (): Character => {
+  return {
+    id: randomUUID(),
+    characterName: "",
+    characterClass: Paladin,
+    specs: [],
+    discordTag: "",
+    key: {
+      name: "SoB",
+      level: 2,
+    },
+  };
 };
+
 const hasAllowedSpec = (character: Character, specName: string) => {
   return character.characterClass.allowedSpecs.some(
     (spec) => spec.specName === specName,
@@ -102,7 +108,11 @@ const CharacterDialog = (props: Props) => {
   };
 
   return (
-    <Dialog>
+    <Dialog
+      onOpenChange={(open) =>
+        open ? setCharacterToEdit(newCharacter()) : null
+      }
+    >
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
@@ -117,7 +127,7 @@ const CharacterDialog = (props: Props) => {
               Character name
             </Label>
             <Input
-              id="discord-tag"
+              id="character-name"
               className="col-span-3"
               onChange={(event) =>
                 setCharacterToEdit({
@@ -125,7 +135,7 @@ const CharacterDialog = (props: Props) => {
                   characterName: event.currentTarget.value,
                 })
               }
-              defaultValue={characterToEdit.discordTag}
+              defaultValue={characterToEdit.characterName}
             />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
