@@ -17,21 +17,25 @@ const items = [
     title: "Dashboard",
     url: "/",
     icon: DashboardIcon,
+    enabled: true,
   },
   {
     title: "Characters",
     url: "/characters",
     icon: UserRoundPen,
+    enabled: true,
   },
   {
     title: "Party",
     url: "/party",
     icon: Users,
+    enabled: true,
   },
   {
     title: "Boosts",
     url: "/boosts",
     icon: CircleDollarSign,
+    enabled: false,
   },
 ];
 
@@ -43,16 +47,19 @@ export function AppSidebar() {
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>
-              {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <a href={item.url}>
-                      <item.icon />
-                      <span>{item.title}</span>
-                    </a>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
+              {items.map((item) => {
+                if (!item.enabled) return;
+                return (
+                  <SidebarMenuItem key={item.title}>
+                    <SidebarMenuButton asChild>
+                      <a href={item.url}>
+                        <item.icon />
+                        <span>{item.title}</span>
+                      </a>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                );
+              })}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
@@ -61,10 +68,10 @@ export function AppSidebar() {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton asChild>
-              <a href={"/settings"}>
+              {/*              <a href={"/settings"}>
                 <Cog />
                 <span>Settings</span>
-              </a>
+              </a>*/}
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>

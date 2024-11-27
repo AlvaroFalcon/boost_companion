@@ -16,7 +16,7 @@ const PartyPage = () => {
   const parties = getParties();
   const characters = getCharacters();
   return (
-    <div className={"flex flex-col  bg-gray-500 h-screen w-full p-4 gap-4"}>
+    <div className={"flex flex-col bg-foreground h-screen w-full p-4 gap-4"}>
       {parties.map((party) => {
         const partyCharacters = characters.filter((character) =>
           party.partyMemberIds.includes(character.id),

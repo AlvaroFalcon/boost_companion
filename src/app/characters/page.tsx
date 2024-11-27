@@ -14,7 +14,7 @@ import { Label } from "../../components/ui/label";
 const CharactersPage = () => {
   const characters = getCharacters();
   return (
-    <div className={"flex flex-col  bg-gray-500 h-screen w-full p-4 gap-4"}>
+    <div className={"flex flex-col bg-foreground h-screen w-full p-4 gap-4"}>
       {characters.map((character) => (
         <div className={"flex w-full gap-4"} key={character.id}>
           <div
