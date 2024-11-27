@@ -4,12 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="feat: add option to edit char">
-      <change afterPath="$PROJECT_DIR$/src/app/party/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/party-dialog.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/party.ts" afterDir="false" />
+    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="wip: structure to get parties created">
+      <change afterPath="$PROJECT_DIR$/src/actions/add-party.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/edit-party.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/get-parties.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/remove-party.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/character-dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/character-dialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/party/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/party/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/party/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/party/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/party-dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/party-dialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/cookies-keys.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/cookies-keys.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732634188546</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="wip: structure to get parties created">
+      <option name="closed" value="true" />
+      <created>1732636817387</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1732636817387</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +243,7 @@
     <MESSAGE value="feat: using date.now as id" />
     <MESSAGE value="feat: basic character item styling" />
     <MESSAGE value="feat: add option to edit char" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add option to edit char" />
+    <MESSAGE value="wip: structure to get parties created" />
+    <option name="LAST_COMMIT_MESSAGE" value="wip: structure to get parties created" />
   </component>
 </project>

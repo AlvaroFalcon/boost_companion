@@ -1,5 +1,8 @@
 "use client";
 import React from "react";
+import addParty from "../actions/add-party";
+import editParty from "../actions/edit-party";
+import { Character } from "../types/character";
 import { Party } from "../types/party";
 import { Button } from "./ui/button";
 import {
@@ -14,9 +17,11 @@ import {
 } from "./ui/dialog";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
+import { ToggleGroup, ToggleGroupItem } from "./ui/toggle-group";
 
 type Props = {
   children: React.ReactNode;
+  characters: Character[];
   party?: Party;
 };
 
@@ -29,13 +34,26 @@ const newParty = (): Party => {
 };
 
 const PartyDialog = (props: Props) => {
-  const { children, party } = props;
+  const { children, party, characters } = props;
   const [partyToEdit, setPartyToEdit] = React.useState<Party>(
     party || newParty,
   );
 
   const handleSubmit = () => {
-    //TODO
+    if (party) {
+      console.log("editing");
+      editParty(partyToEdit);
+      return;
+    }
+    console.log("adding");
+    addParty(partyToEdit);
+  };
+
+  const handleToggle = (value: string[]) => {
+    setPartyToEdit({
+      ...partyToEdit,
+      partyMemberIds: value,
+    });
   };
 
   return (
@@ -69,8 +87,22 @@ const PartyDialog = (props: Props) => {
               defaultValue={partyToEdit.partyName}
             />
           </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            <div>scroll</div>
+          <div className={"w-full"}>
+            <ToggleGroup
+              type={"multiple"}
+              onValueChange={(value) => handleToggle(value)}
+              className={"flex flex-col w-full border-2 rounded p-4"}
+            >
+              {characters.map((character) => (
+                <ToggleGroupItem
+                  key={character.id}
+                  value={character.id}
+                  className={"p-4 border-b-2"}
+                >
+                  {character.characterName}
+                </ToggleGroupItem>
+              ))}
+            </ToggleGroup>
           </div>
         </div>
         <DialogFooter>
