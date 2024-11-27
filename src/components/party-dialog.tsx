@@ -90,14 +90,16 @@ const PartyDialog = (props: Props) => {
           <div className={"w-full"}>
             <ToggleGroup
               type={"multiple"}
+              defaultValue={partyToEdit.partyMemberIds}
               onValueChange={(value) => handleToggle(value)}
               className={"flex flex-col w-full border-2 rounded p-4"}
             >
               {characters.map((character) => (
                 <ToggleGroupItem
+                  variant={"outline"}
                   key={character.id}
                   value={character.id}
-                  className={"p-4 border-b-2"}
+                  className={"p-4 border-b-2 w-full"}
                 >
                   {character.characterName}
                 </ToggleGroupItem>
