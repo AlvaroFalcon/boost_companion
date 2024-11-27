@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="updatd yarn lock">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/publish.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/publish.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="updated publish">
+      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,14 +85,6 @@
       <workItem from="1732296779065" duration="109000" />
       <workItem from="1732296892149" duration="14752000" />
       <workItem from="1732533776904" duration="15473000" />
-    </task>
-    <task id="LOCAL-00001" summary="first commit :rocket:">
-      <option name="closed" value="true" />
-      <created>1729279369453</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1729279369453</updated>
     </task>
     <task id="LOCAL-00002" summary="feat: hover card">
       <option name="closed" value="true" />
@@ -479,7 +470,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732751070127</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="updated publish">
+      <option name="closed" value="true" />
+      <created>1732751277851</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1732751277852</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,7 +496,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="another reminder" />
     <MESSAGE value="styling" />
     <MESSAGE value="feat: saving character properly" />
     <MESSAGE value="feat: using date.now as id" />
@@ -522,6 +520,7 @@
     <MESSAGE value="updated publish action" />
     <MESSAGE value="updatd package json" />
     <MESSAGE value="updatd yarn lock" />
-    <option name="LAST_COMMIT_MESSAGE" value="updatd yarn lock" />
+    <MESSAGE value="updated publish" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated publish" />
   </component>
 </project>
