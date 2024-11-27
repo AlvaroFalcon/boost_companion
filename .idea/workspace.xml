@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="changed identifier">
+    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="updated workflow">
       <change beforePath="$PROJECT_DIR$/.github/workflows/release.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/release.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -295,7 +295,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732721794818</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="updated workflow">
+      <option name="closed" value="true" />
+      <created>1732722088464</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1732722088464</updated>
+    </task>
+    <task id="LOCAL-00028" summary="updated workflow">
+      <option name="closed" value="true" />
+      <created>1732722131161</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1732722131162</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +329,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="first commit :rocket:" />
     <MESSAGE value="feat: hover card" />
     <MESSAGE value="feat: update dialog values in state" />
     <MESSAGE value="feat: properly saving checkbox states" />
@@ -338,6 +353,7 @@
     <MESSAGE value="feat: workflow to create tauri versions" />
     <MESSAGE value="changed version" />
     <MESSAGE value="changed identifier" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed identifier" />
+    <MESSAGE value="updated workflow" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated workflow" />
   </component>
 </project>
