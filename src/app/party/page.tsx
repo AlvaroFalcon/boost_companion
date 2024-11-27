@@ -16,7 +16,7 @@ const PartyPage = () => {
   const parties = getParties();
   const characters = getCharacters();
   return (
-    <div className={"flex flex-col bg-foreground h-screen w-full p-4 gap-4"}>
+    <div className={"flex flex-col bg-foreground  h-screen w-full p-4 gap-4"}>
       {parties.map((party) => {
         const partyCharacters = characters.filter((character) =>
           party.partyMemberIds.includes(character.id),
@@ -24,7 +24,7 @@ const PartyPage = () => {
         return (
           <div className={"flex w-full gap-4"} key={party.id}>
             <div
-              className={"px-4 w-3/5 border-2 rounded bg-white"}
+              className={"px-4 w-3/5 border-2 rounded bg-background"}
               key={party.id}
             >
               <Accordion type="single" collapsible>

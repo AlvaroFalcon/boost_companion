@@ -27,7 +27,7 @@ const HomePage = () => {
           return (
             <div className={"flex w-full gap-4"} key={party.id}>
               <div
-                className={"px-4 w-3/5 border-2 rounded bg-white"}
+                className={"px-4 w-3/5 border-2 rounded bg-background"}
                 key={party.id}
               >
                 <Accordion type="single" collapsible>
