@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="update package json path">
+    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="update workflow">
       <change beforePath="$PROJECT_DIR$/.github/workflows/release.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/release.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -318,7 +318,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732722375991</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="update workflow">
+      <option name="closed" value="true" />
+      <created>1732722707540</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1732722707540</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,7 +344,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: update dialog values in state" />
     <MESSAGE value="feat: properly saving checkbox states" />
     <MESSAGE value="feat: remove charName and add keystone config" />
     <MESSAGE value="fix: remove not needed index" />
@@ -361,6 +368,7 @@
     <MESSAGE value="changed identifier" />
     <MESSAGE value="updated workflow" />
     <MESSAGE value="update package json path" />
-    <option name="LAST_COMMIT_MESSAGE" value="update package json path" />
+    <MESSAGE value="update workflow" />
+    <option name="LAST_COMMIT_MESSAGE" value="update workflow" />
   </component>
 </project>

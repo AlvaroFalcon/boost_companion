@@ -34,8 +34,8 @@ jobs:
           node-version: '16'
           cache: 'yarn'
           cache-dependency-path: |
-            ./src/package.json
-            ./src/yarn.lock
+            ./package.json
+            ./yarn.lock
 
       # Install Yarn 4.5.0 globally
       - name: Install Yarn 4.5.0 globally
