@@ -1,6 +1,5 @@
-# File: .github/actions/setup-node/action.yml
 name: setup-node
-description: "Setup Node.js ⚙️ - Enable Corepack 🔧 - Cache dependencies ⚡"
+description: "Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧"
 runs:
   using: "composite"
   steps:
@@ -8,25 +7,15 @@ runs:
       uses: actions/setup-node@v4
       with:
         node-version: 20
-        cache: 'yarn'
-        cache-dependency-path: '**/yarn.lock'
 
-    - name: Install Corepack 🔧
-      shell: bash
-      run: npm install -g corepack
+    - name: Cache dependencies ⚡
+      id: cache_dependencies
+      uses: actions/cache@v3
+      with:
+        path: node_modules
+        key: node-modules-${{ hashFiles(yarn.lock) }}
 
-    - name: Enable Corepack
+    - name: Install dependencies 🔧
       shell: bash
-      run: corepack enable
-
-    - name: Prepare Yarn
-      shell: bash
-      run: corepack prepare yarn@4.5.0 --activate
-
-    - name: Check Yarn Version
-      shell: bash
-      run: yarn --version
-
-    - name: Install Dependencies 🔧
-      shell: bash
-      run: yarn install --immutable
+      if: steps.cache_dependencies.outputs.cache-hit != 'true'
+      run: npm ci
