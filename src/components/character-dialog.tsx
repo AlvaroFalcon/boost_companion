@@ -259,7 +259,7 @@ const CharacterDialog = (props: Props) => {
                   },
                 })
               }
-              defaultValue={10}
+              defaultValue={characterToEdit.key.level}
             />
           </div>
         </div>
