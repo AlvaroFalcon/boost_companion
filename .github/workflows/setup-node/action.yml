@@ -1,3 +1,4 @@
+# File: .github/actions/setup-node/action.yml
 name: setup-node
 description: "Setup Node.js ⚙️ - Enable Corepack 🔧 - Cache dependencies ⚡"
 runs:
@@ -11,16 +12,21 @@ runs:
         cache-dependency-path: '**/yarn.lock'
 
     - name: Install Corepack 🔧
+      shell: bash
       run: npm install -g corepack
 
     - name: Enable Corepack
+      shell: bash
       run: corepack enable
 
     - name: Prepare Yarn
+      shell: bash
       run: corepack prepare yarn@4.5.0 --activate
 
     - name: Check Yarn Version
+      shell: bash
       run: yarn --version
 
     - name: Install Dependencies 🔧
+      shell: bash
       run: yarn install --immutable
