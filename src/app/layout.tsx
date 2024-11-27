@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { AppSidebar } from "../components/ui/app-sidebar";
 import { SidebarProvider } from "../components/ui/sidebar";
+import { Toaster } from "../components/ui/toaster";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,6 +20,7 @@ export default function RootLayout({
         <SidebarProvider>
           <AppSidebar />
           <main className={"w-full"}>{children}</main>
+          <Toaster />
         </SidebarProvider>
       </body>
     </html>
