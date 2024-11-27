@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import addParty from "../actions/add-party";
-import editParty from "../actions/edit-party";
+import addParty from "../data-actions/add-party";
+import editParty from "../data-actions/edit-party";
 import { Character } from "../types/character";
 import { Party } from "../types/party";
 import { Button } from "./ui/button";

@@ -1,7 +1,8 @@
-"use server";
+"use client";
 
-import getCharacters from "../../actions/get-characters";
-import getParties from "../../actions/get-parties";
+import { useEffect, useState } from "react";
+import getCharacters from "../../data-actions/get-characters";
+import getParties from "../../data-actions/get-parties";
 import PartyDialog from "../../components/party-dialog";
 import {
   Accordion,
@@ -11,10 +12,17 @@ import {
 } from "../../components/ui/accordion";
 import { Button } from "../../components/ui/button";
 import { Label } from "../../components/ui/label";
+import { Character } from "../../types/character";
+import { Party } from "../../types/party";
 
 const PartyPage = () => {
-  const parties = getParties();
-  const characters = getCharacters();
+  const [parties, setParties] = useState<Party[]>([]);
+  const [characters, setCharacters] = useState<Character[]>([]);
+  useEffect(() => {
+    setParties(getParties());
+    setCharacters(getCharacters());
+  }, []);
+
   return (
     <div className={"flex flex-col bg-foreground  h-screen w-full p-4 gap-4"}>
       {parties.map((party) => {

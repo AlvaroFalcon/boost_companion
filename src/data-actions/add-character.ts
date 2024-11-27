@@ -1,5 +1,5 @@
-"use server";
-import { cookies } from "next/headers";
+"use client";
+
 import { CHARACTER_COOKIES_KEY } from "../lib/cookies-keys";
 import { Character } from "../types/character";
 import getCharacters from "./get-characters";
@@ -13,7 +13,8 @@ const addCharacter = (characterToEdit: Character) => {
   )
     return;
   characters.push(characterToEdit);
-  cookies().set(CHARACTER_COOKIES_KEY, JSON.stringify(characters));
+  localStorage.setItem(CHARACTER_COOKIES_KEY, JSON.stringify(characters));
+  window.location.reload();
 };
 
 export default addCharacter;

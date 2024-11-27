@@ -1,6 +1,7 @@
-"use server";
+"use client";
 
-import getCharacters from "../../actions/get-characters";
+import { useEffect, useState } from "react";
+import getCharacters from "../../data-actions/get-characters";
 import CharacterDialog from "../../components/character-dialog";
 import {
   Accordion,
@@ -10,9 +11,14 @@ import {
 } from "../../components/ui/accordion";
 import { Button } from "../../components/ui/button";
 import { Label } from "../../components/ui/label";
+import { Character } from "../../types/character";
 
 const CharactersPage = () => {
-  const characters = getCharacters();
+  const [characters, setCharacters] = useState<Character[]>([]);
+  useEffect(() => {
+    setCharacters(getCharacters());
+  }, []);
+
   return (
     <div className={"flex flex-col bg-foreground h-screen w-full p-4 gap-4"}>
       {characters.map((character) => (

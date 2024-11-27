@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import addCharacter from "../actions/add-character";
-import editCharacter from "../actions/edit-character";
+import addCharacter from "../data-actions/add-character";
+import editCharacter from "../data-actions/edit-character";
 import { Character, CharacterSpec, KeystoneName } from "../types/character";
 import { ClassSelectOptions } from "../types/class-select-options";
 import { getClassByName, Paladin } from "../types/classes";

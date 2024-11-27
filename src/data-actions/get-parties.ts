@@ -1,10 +1,9 @@
-"use server";
-import { cookies } from "next/headers";
+"use client";
 import { PARTIES_COOKIES_KEY } from "../lib/cookies-keys";
 import { Party } from "../types/party";
 
 const getParties = (): Party[] => {
-  const parties = cookies().get(PARTIES_COOKIES_KEY)?.value;
+  const parties = localStorage.getItem(PARTIES_COOKIES_KEY);
   return parties ? JSON.parse(parties) : [];
 };
 

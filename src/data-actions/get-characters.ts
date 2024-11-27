@@ -1,10 +1,9 @@
-"use server";
-import { cookies } from "next/headers";
+"use client";
 import { CHARACTER_COOKIES_KEY } from "../lib/cookies-keys";
 import { Character } from "../types/character";
 
 const getCharacters = (): Character[] => {
-  const characters = cookies().get(CHARACTER_COOKIES_KEY)?.value;
+  const characters = localStorage.getItem(CHARACTER_COOKIES_KEY);
   return characters ? JSON.parse(characters) : [];
 };
 

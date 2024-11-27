@@ -5,8 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="update workflow">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/setup-node/action.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/release.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/publish.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/add-character.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/add-character.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/add-party.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/add-party.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/edit-character.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/edit-character.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/edit-party.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/edit-party.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/get-characters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/get-characters.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/get-parties.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/get-parties.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/remove-character.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/remove-character.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/remove-party.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/remove-party.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/boosts/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/boosts/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/characters/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/characters/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/party/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/party/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/party/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/party/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/settings/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/settings/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/character-dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/character-dialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/party-dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/party-dialog.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +57,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "release",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/alvaro/Documents/Proyectos/booster-companion/src/components",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",

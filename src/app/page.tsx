@@ -1,7 +1,8 @@
-"use server";
+"use client";
 
-import getCharacters from "../actions/get-characters";
-import getParties from "../actions/get-parties";
+import { useEffect, useState } from "react";
+import getCharacters from "../data-actions/get-characters";
+import getParties from "../data-actions/get-parties";
 import CopyMessageButton from "../components/CopyMessageButton";
 import {
   Accordion,
@@ -11,10 +12,16 @@ import {
 } from "../components/ui/accordion";
 import AppBar from "../components/ui/app-bar";
 import { Label } from "../components/ui/label";
+import { Character } from "../types/character";
+import { Party } from "../types/party";
 
 const HomePage = () => {
-  const parties = getParties();
-  const characters = getCharacters();
+  const [parties, setParties] = useState<Party[]>([]);
+  const [characters, setCharacters] = useState<Character[]>([]);
+  useEffect(() => {
+    setParties(getParties());
+    setCharacters(getCharacters());
+  }, []);
 
   return (
     <div>
