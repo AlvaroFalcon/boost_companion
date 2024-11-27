@@ -24,49 +24,53 @@ jobs:
 
     runs-on: ${{ matrix.platform }}
     steps:
-      # **Checkout the repository**
+      # Checkout the repository
       - uses: actions/checkout@v4
 
-      # **Set up Node.js and enable Corepack**
+      # Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '16'
           cache: 'yarn'
-          cache-dependency-path: ./package.json
+          cache-dependency-path: |
+            ./src/package.json
+            ./src/yarn.lock
 
-      - name: Enable Corepack
-        run: corepack enable
+      # Install Yarn 4.5.0 globally
+      - name: Install Yarn 4.5.0 globally
+        run: npm install --global yarn@4.5.0
 
-      - name: Prepare Yarn
-        run: corepack prepare yarn@4.5.0 --activate
+      # Verify Yarn version
+      - name: Check Yarn Version
+        run: yarn --version
 
-      # **Install Rust stable**
+      # Install Rust stable
       - name: Install Rust stable
         uses: dtolnay/rust-toolchain@stable
         with:
           targets: ${{ matrix.platform == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
 
-      # **Install dependencies (Ubuntu only)**
+      # Install dependencies (Ubuntu only)
       - name: Install dependencies (Ubuntu only)
         if: matrix.platform == 'ubuntu-22.04'
         run: |
           sudo apt-get update
           sudo apt-get install -y libwebkit2gtk-4.0-dev libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf
 
-      # **Install frontend dependencies using Yarn**
+      # Install frontend dependencies using Yarn
       - name: Install frontend dependencies
         run: |
           cd src
           yarn install
 
-      # **Build Next.js app**
+      # Build Next.js app
       - name: Build Next.js app
         run: |
           cd src
           yarn build
 
-      # **Build the Tauri app**
+      # Build the Tauri app
       - uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -79,7 +83,7 @@ jobs:
           projectPath: ./src-tauri
           args: ${{ matrix.args }}
 
-      # **Upload artifacts (optional)**
+      # Upload artifacts (optional)
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
