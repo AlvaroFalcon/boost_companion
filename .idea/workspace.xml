@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="fix: issue on the keystone level input">
-      <change afterPath="$PROJECT_DIR$/src/components/CopyMessageButton.tsx" afterDir="false" />
+    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="feat: add missing classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CopyMessageButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CopyMessageButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +228,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732710695653</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="wip: adding button to copy the party message">
+      <option name="closed" value="true" />
+      <created>1732712442928</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1732712442929</updated>
+    </task>
+    <task id="LOCAL-00020" summary="feat: add missing classes">
+      <option name="closed" value="true" />
+      <created>1732712484634</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1732712484634</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +279,8 @@
     <MESSAGE value="wip: structure to get parties created" />
     <MESSAGE value="feat: party initial ui and data management" />
     <MESSAGE value="fix: issue on the keystone level input" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: issue on the keystone level input" />
+    <MESSAGE value="wip: adding button to copy the party message" />
+    <MESSAGE value="feat: add missing classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add missing classes" />
   </component>
 </project>

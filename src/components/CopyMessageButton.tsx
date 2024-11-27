@@ -1,16 +1,20 @@
 "use client";
 
 import { toast } from "../hooks/use-toast";
+import { buildPartyMessage } from "../lib/utils";
+import { Character } from "../types/character";
 import { Party } from "../types/party";
 import { Button } from "./ui/button";
 
 type Props = {
   party: Party;
+  characters: Character[];
 };
 const CopyMessageButton = (props: Props) => {
-  const { party } = props;
+  const { party, characters } = props;
   const handleCopyMessage = (party: Party) => {
-    navigator.clipboard.writeText(`Party message`);
+    const message = buildPartyMessage(party, characters);
+    navigator.clipboard.writeText(message);
     toast({
       title: "Message copied to the clipboard!",
     });

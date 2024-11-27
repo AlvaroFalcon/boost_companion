@@ -53,7 +53,7 @@ const HomePage = () => {
                 </Accordion>
               </div>
               <div className={"flex gap-2"}>
-                <CopyMessageButton party={party} />
+                <CopyMessageButton party={party} characters={characters} />
               </div>
             </div>
           );
