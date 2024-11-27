@@ -3,12 +3,16 @@ description: "Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependenci
 runs:
   using: "composite"
   steps:
+    - name: Checkout 🛎️
+      uses: actions/checkout@v4
+    - name: Enable Corepack
+      shell: bash
+      run: corepack enable
     - name: Setup Node.js with Yarn via Corepack ⚙️
       uses: actions/setup-node@v4
       with:
         node-version: 20
         cache: 'yarn'
-        corepack: true
 
     - name: Install dependencies 🔧
       shell: bash
