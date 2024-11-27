@@ -33,7 +33,7 @@ jobs:
       - name: Build with Next.js 🏗️
         run: yarn build
       - name: List Directory Contents 📂
-        run: ls .next -la
+        run: ls -la
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
         with:
