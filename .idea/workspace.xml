@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="reload everytime data changes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/app-sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/app-sidebar.tsx" afterDir="false" />
+    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="fix: app sidebar styling">
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,14 +87,6 @@
       <workItem from="1732296779065" duration="109000" />
       <workItem from="1732296892149" duration="14752000" />
       <workItem from="1732533776904" duration="15473000" />
-    </task>
-    <task id="LOCAL-00010" summary="styling">
-      <option name="closed" value="true" />
-      <created>1732544353100</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1732544353100</updated>
     </task>
     <task id="LOCAL-00011" summary="feat: saving character properly">
       <option name="closed" value="true" />
@@ -481,7 +472,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732788918511</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="fix: app sidebar styling">
+      <option name="closed" value="true" />
+      <created>1732789298072</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1732789298072</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,7 +498,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: basic character item styling" />
     <MESSAGE value="feat: add option to edit char" />
     <MESSAGE value="wip: structure to get parties created" />
     <MESSAGE value="feat: party initial ui and data management" />
@@ -524,6 +522,7 @@
     <MESSAGE value="fix: navigation" />
     <MESSAGE value="fix: bg color" />
     <MESSAGE value="reload everytime data changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="reload everytime data changes" />
+    <MESSAGE value="fix: app sidebar styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: app sidebar styling" />
   </component>
 </project>
