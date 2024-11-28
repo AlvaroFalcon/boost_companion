@@ -42,6 +42,11 @@ const PartySchema = z.object({
   partyMemberIds: z.array(z.string()),
 });
 
+const ImportDataSchema = z.object({
+  parties: z.array(PartySchema),
+  characters: z.array(CharacterSchema),
+});
+
 const PartiesSchema = z.array(PartySchema);
 
 const CharactersSchema = z.array(CharacterSchema);
@@ -52,6 +57,7 @@ export type CharacterClass = z.infer<typeof CharacterClassSchema>;
 export type MythicKeystone = z.infer<typeof MythicKeystoneSchema>;
 export type Character = z.infer<typeof CharacterSchema>;
 export type Party = z.infer<typeof PartySchema>;
+export type ImportData = z.infer<typeof ImportDataSchema>;
 
 export const decodeParties = (data: string): Party[] => {
   try {
@@ -71,6 +77,17 @@ export const decodeCharacters = (data: string): Character[] => {
     return CharactersSchema.parse(parsedData);
   } catch (error) {
     console.error("Failed to decode and validate characters:", error);
+    throw error;
+  }
+};
+
+export const decodeImportData = (data: string): ImportData => {
+  try {
+    const decodedString = atob(data);
+    const parsedData = JSON.parse(decodedString);
+    return ImportDataSchema.parse(parsedData);
+  } catch (error) {
+    console.error("Failed to decode and validate import data:", error);
     throw error;
   }
 };

@@ -4,21 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="fix: missing component">
-      <change afterPath="$PROJECT_DIR$/src/components/import-characters-dialog.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/import-party-dialog.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data-actions/import-character-data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/importer.ts" afterDir="false" />
+    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="feat: change types to zod schemas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/characters/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/characters/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/party/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/party/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/party-dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/party-dialog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data-actions/add-party.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/add-party.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data-actions/edit-party.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/edit-party.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data-actions/get-parties.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/get-parties.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/character.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/character.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/party.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,14 +89,6 @@
       <workItem from="1732296779065" duration="109000" />
       <workItem from="1732296892149" duration="14752000" />
       <workItem from="1732533776904" duration="15473000" />
-    </task>
-    <task id="LOCAL-00015" summary="wip: structure to get parties created">
-      <option name="closed" value="true" />
-      <created>1732636817387</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1732636817387</updated>
     </task>
     <task id="LOCAL-00016" summary="feat: party initial ui and data management">
       <option name="closed" value="true" />
@@ -493,7 +474,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732791480350</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="feat: change types to zod schemas">
+      <option name="closed" value="true" />
+      <created>1732798286589</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1732798286589</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,7 +500,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="wip: adding button to copy the party message" />
     <MESSAGE value="feat: add missing classes" />
     <MESSAGE value="feat: copying proper message" />
     <MESSAGE value="feat: styling a bit" />
@@ -536,6 +524,7 @@
     <MESSAGE value="fix: parties message and imports cleaning" />
     <MESSAGE value="feat: remove party and characters" />
     <MESSAGE value="fix: missing component" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: missing component" />
+    <MESSAGE value="feat: change types to zod schemas" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: change types to zod schemas" />
   </component>
 </project>

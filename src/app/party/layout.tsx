@@ -7,8 +7,7 @@ import AppBar from "../../components/ui/app-bar";
 import { Button } from "../../components/ui/button";
 import getParties from "../../data-actions/get-parties";
 import { exportPartiesAndCharacters } from "../../lib/importer";
-import { Character } from "../../types/character";
-import { Party } from "../../types/party";
+import { Character, Party } from "../../types/character";
 
 const Layout = ({
   children,
