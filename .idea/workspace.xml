@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="add import schame and decode function">
+    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="feat: logic to import characters">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/importer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/importer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/character.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/character.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/copy-message-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/copy-message-button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data-actions/remove-character.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/remove-character.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,14 +89,6 @@
       <workItem from="1732296779065" duration="109000" />
       <workItem from="1732296892149" duration="14752000" />
       <workItem from="1732533776904" duration="15473000" />
-    </task>
-    <task id="LOCAL-00017" summary="feat: party initial ui and data management">
-      <option name="closed" value="true" />
-      <created>1732710013812</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1732710013812</updated>
     </task>
     <task id="LOCAL-00018" summary="fix: issue on the keystone level input">
       <option name="closed" value="true" />
@@ -482,7 +474,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732798984648</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="feat: logic to import characters">
+      <option name="closed" value="true" />
+      <created>1732804216750</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1732804216750</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,7 +500,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: copying proper message" />
     <MESSAGE value="feat: styling a bit" />
     <MESSAGE value="feat: changed colors to match a better design" />
     <MESSAGE value="feat: workflow to create tauri versions" />
@@ -525,6 +524,7 @@
     <MESSAGE value="fix: missing component" />
     <MESSAGE value="feat: change types to zod schemas" />
     <MESSAGE value="add import schame and decode function" />
-    <option name="LAST_COMMIT_MESSAGE" value="add import schame and decode function" />
+    <MESSAGE value="feat: logic to import characters" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: logic to import characters" />
   </component>
 </project>

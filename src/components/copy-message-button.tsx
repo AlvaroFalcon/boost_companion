@@ -1,5 +1,6 @@
 "use client";
 
+import { ClipboardCopyIcon } from "lucide-react";
 import { toast } from "../hooks/use-toast";
 import { buildPartyMessage } from "../lib/utils";
 import { Character, Party } from "../types/character";
@@ -19,8 +20,12 @@ const CopyMessageButton = (props: Props) => {
     });
   };
   return (
-    <Button variant={"outline"} onClick={() => handleCopyMessage(party)}>
-      Copy message
+    <Button
+      variant={"outline"}
+      onClick={() => handleCopyMessage(party)}
+      disabled={party.partyMemberIds.length === 0}
+    >
+      <ClipboardCopyIcon />
     </Button>
   );
 };
