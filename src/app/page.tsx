@@ -27,6 +27,11 @@ const HomePage = () => {
     <div>
       <AppBar />
       <div className={"flex flex-col bg-pagebg h-screen w-full p-4 gap-4"}>
+        {parties.length === 0 && (
+          <div className={"w-full h-full flex justify-center items-center"}>
+            <Label>{"No parties found. Create a party to get started."}</Label>
+          </div>
+        )}
         {parties.map((party) => {
           const partyCharacters = characters.filter((character) =>
             party.partyMemberIds.includes(character.id),

@@ -10,7 +10,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { DashboardIcon } from "@radix-ui/react-icons";
-import { CircleDollarSign, Cog, Home, UserRoundPen, Users } from "lucide-react";
+import { CircleDollarSign, UserRoundPen, Users } from "lucide-react";
 import Link from "next/link";
 import { Label } from "./label";
 
