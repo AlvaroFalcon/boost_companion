@@ -1,7 +1,14 @@
 import getCharacters from "../data-actions/get-characters";
-import importCharacterData from "../data-actions/import-character-data";
+import getParties from "../data-actions/get-parties";
+import storeImportedCharacters from "../data-actions/store-imported-characters";
+import storeImportedParties from "../data-actions/store-imported-parties";
 import { toast } from "../hooks/use-toast";
-import { Character, decodeCharacters, Party } from "../types/character";
+import {
+  Character,
+  decodeCharacters,
+  decodeImportData,
+  Party,
+} from "../types/character";
 
 export const encodeData = (data: unknown): string => {
   return btoa(JSON.stringify(data));
@@ -26,23 +33,39 @@ export const exportCharacters = (characters: Character[]) => {
   });
 };
 
-export const decodePartiesAndCharacters = (
-  data: string,
-): { parties: Party[]; characters: Character[] } => {
-  const decodedData = JSON.parse(atob(data));
-  return {
-    parties: decodedData.parties,
-    characters: decodedData.characters,
-  };
-};
-
 export const importPartiesAndCharacters = (data: string) => {
-  //todo
+  const { parties, characters } = decodeImportData(data);
+  importCharacters(characters);
+  importParties(parties);
 };
 
-export const importCharacters = (data: string) => {
-  const characters = getCharacters();
+export const importCharacterData = (data: string) => {
   const importedCharacters = decodeCharacters(data);
+  importCharacters(importedCharacters);
+};
+
+export const importParties = (importedParties: Party[]) => {
+  const parties = getParties();
+  importedParties.forEach((importedParty) => {
+    const index = parties.findIndex(
+      (party) =>
+        party.id === importedParty.id ||
+        party.partyName === importedParty.partyName,
+    );
+    if (index === -1) {
+      parties.push(importedParty);
+    } else {
+      parties[index] = importedParty;
+    }
+  });
+  storeImportedParties(parties);
+  toast({
+    title: "Parties imported successfully!",
+  });
+};
+
+const importCharacters = (importedCharacters: Character[]) => {
+  const characters = getCharacters();
   importedCharacters.forEach((importedCharacter) => {
     const index = characters.findIndex(
       (character) =>
@@ -55,7 +78,7 @@ export const importCharacters = (data: string) => {
       characters[index] = importedCharacter;
     }
   });
-  importCharacterData(characters);
+  storeImportedCharacters(characters);
   toast({
     title: "Characters imported successfully!",
   });

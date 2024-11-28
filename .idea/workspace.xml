@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="feat: logic to import characters">
+    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="fix: remove character from parties and copy message icon">
+      <change afterPath="$PROJECT_DIR$/src/data-actions/store-imported-parties.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/copy-message-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/copy-message-button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data-actions/remove-character.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/remove-character.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/party/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/party/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/import-characters-dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/import-characters-dialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/import-party-dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/import-party-dialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data-actions/import-character-data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/store-imported-characters.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/importer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/importer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,14 +93,6 @@
       <workItem from="1732296779065" duration="109000" />
       <workItem from="1732296892149" duration="14752000" />
       <workItem from="1732533776904" duration="15473000" />
-    </task>
-    <task id="LOCAL-00018" summary="fix: issue on the keystone level input">
-      <option name="closed" value="true" />
-      <created>1732710695653</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1732710695653</updated>
     </task>
     <task id="LOCAL-00019" summary="wip: adding button to copy the party message">
       <option name="closed" value="true" />
@@ -482,7 +478,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732804216750</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="fix: remove character from parties and copy message icon">
+      <option name="closed" value="true" />
+      <created>1732805553135</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1732805553135</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,7 +504,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: styling a bit" />
     <MESSAGE value="feat: changed colors to match a better design" />
     <MESSAGE value="feat: workflow to create tauri versions" />
     <MESSAGE value="changed version" />
@@ -525,6 +528,7 @@
     <MESSAGE value="feat: change types to zod schemas" />
     <MESSAGE value="add import schame and decode function" />
     <MESSAGE value="feat: logic to import characters" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: logic to import characters" />
+    <MESSAGE value="fix: remove character from parties and copy message icon" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: remove character from parties and copy message icon" />
   </component>
 </project>

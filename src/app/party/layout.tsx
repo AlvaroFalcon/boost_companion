@@ -1,6 +1,7 @@
 "use client";
 import { Copy, Import, Plus } from "lucide-react";
 import React, { useEffect, useState } from "react";
+import ImportPartiesDialog from "../../components/import-party-dialog";
 import getCharacters from "../../data-actions/get-characters";
 import PartyDialog from "../../components/party-dialog";
 import AppBar from "../../components/ui/app-bar";
@@ -25,10 +26,12 @@ const Layout = ({
     <div className={"flex flex-col"}>
       <AppBar>
         <div className={"flex gap-2"}>
-          <Button variant={"ghost"}>
-            <span>Import party</span>
-            <Import />
-          </Button>
+          <ImportPartiesDialog>
+            <Button variant={"ghost"}>
+              <span>Import party</span>
+              <Import />
+            </Button>
+          </ImportPartiesDialog>
           <Button
             variant={"ghost"}
             onClick={() => exportPartiesAndCharacters(parties, characters)}

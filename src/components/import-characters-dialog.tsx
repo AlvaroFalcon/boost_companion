@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { importCharacters } from "../lib/importer";
+import { importCharacterData } from "../lib/importer";
 import { Button } from "./ui/button";
 import {
   Dialog,
@@ -24,7 +24,7 @@ const ImportCharactersDialog = (props: Props) => {
   const [inputValue, setInputValue] = React.useState("");
 
   const handleSubmit = () => {
-    importCharacters(inputValue);
+    importCharacterData(inputValue);
   };
 
   return (

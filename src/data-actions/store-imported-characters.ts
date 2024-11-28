@@ -3,9 +3,9 @@
 import { CHARACTER_COOKIES_KEY } from "../lib/cookies-keys";
 import { Character } from "../types/character";
 
-const importCharacterData = (characters: Character[]) => {
+const storeImportedCharacters = (characters: Character[]) => {
   localStorage.setItem(CHARACTER_COOKIES_KEY, JSON.stringify(characters));
   window.location.reload();
 };
 
-export default importCharacterData;
+export default storeImportedCharacters;
