@@ -26,7 +26,7 @@ const HomePage = () => {
   return (
     <div>
       <AppBar />
-      <div className={"flex flex-col bg-foreground h-screen w-full p-4 gap-4"}>
+      <div className={"flex flex-col bg-pagebg h-screen w-full p-4 gap-4"}>
         {parties.map((party) => {
           const partyCharacters = characters.filter((character) =>
             party.partyMemberIds.includes(character.id),
