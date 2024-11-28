@@ -2,8 +2,7 @@
 
 import { toast } from "../hooks/use-toast";
 import { buildPartyMessage } from "../lib/utils";
-import { Character } from "../types/character";
-import { Party } from "../types/party";
+import { Character, Party } from "../types/character";
 import { Button } from "./ui/button";
 
 type Props = {

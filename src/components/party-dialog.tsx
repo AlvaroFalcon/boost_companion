@@ -2,8 +2,7 @@
 import React from "react";
 import addParty from "../data-actions/add-party";
 import editParty from "../data-actions/edit-party";
-import { Character } from "../types/character";
-import { Party } from "../types/party";
+import { Character, Party } from "../types/character";
 import { Button } from "./ui/button";
 import {
   Dialog,
@@ -65,7 +64,7 @@ const PartyDialog = (props: Props) => {
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Add new partyr</DialogTitle>
+          <DialogTitle>Add new party</DialogTitle>
           <DialogDescription>
             Put together all your characters to create a party
           </DialogDescription>

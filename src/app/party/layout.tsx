@@ -1,11 +1,14 @@
 "use client";
-import { Plus } from "lucide-react";
+import { Copy, Import, Plus } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import getCharacters from "../../data-actions/get-characters";
 import PartyDialog from "../../components/party-dialog";
 import AppBar from "../../components/ui/app-bar";
 import { Button } from "../../components/ui/button";
+import getParties from "../../data-actions/get-parties";
+import { exportPartiesAndCharacters } from "../../lib/importer";
 import { Character } from "../../types/character";
+import { Party } from "../../types/party";
 
 const Layout = ({
   children,
@@ -13,19 +16,34 @@ const Layout = ({
   children: React.ReactNode;
 }>) => {
   const [characters, setCharacters] = useState<Character[]>([]);
+  const [parties, setParties] = useState<Party[]>([]);
   useEffect(() => {
     setCharacters(getCharacters());
+    setParties(getParties());
   }, []);
 
   return (
     <div className={"flex flex-col"}>
       <AppBar>
-        <PartyDialog characters={characters}>
+        <div className={"flex gap-2"}>
           <Button variant={"ghost"}>
-            <span>Add</span>
-            <Plus />
+            <span>Import party</span>
+            <Import />
           </Button>
-        </PartyDialog>
+          <Button
+            variant={"ghost"}
+            onClick={() => exportPartiesAndCharacters(parties, characters)}
+          >
+            <span>Export parties</span>
+            <Copy />
+          </Button>
+          <PartyDialog characters={characters}>
+            <Button variant={"ghost"}>
+              <span>Add</span>
+              <Plus />
+            </Button>
+          </PartyDialog>
+        </div>
       </AppBar>
       {children}
     </div>

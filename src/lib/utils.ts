@@ -1,7 +1,6 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { Character, CharacterSpec } from "../types/character";
-import { Party } from "../types/party";
+import { Character, CharacterSpec, Party } from "../types/character";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
