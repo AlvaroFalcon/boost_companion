@@ -12,6 +12,7 @@ import {
 import { DashboardIcon } from "@radix-ui/react-icons";
 import { CircleDollarSign, Cog, Home, UserRoundPen, Users } from "lucide-react";
 import Link from "next/link";
+import { Label } from "./label";
 
 const items = [
   {
@@ -42,7 +43,7 @@ const items = [
 
 export function AppSidebar() {
   return (
-    <Sidebar>
+    <Sidebar collapsible={"icon"}>
       <SidebarHeader />
       <SidebarContent>
         <SidebarGroup>
@@ -55,7 +56,7 @@ export function AppSidebar() {
                     <SidebarMenuButton asChild>
                       <Link href={item.url}>
                         <item.icon />
-                        <span>{item.title}</span>
+                        <Label className={"font-bold"}>{item.title}</Label>
                       </Link>
                     </SidebarMenuButton>
                   </SidebarMenuItem>

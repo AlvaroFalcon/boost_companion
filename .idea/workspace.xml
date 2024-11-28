@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="fix: bg color">
-      <change beforePath="$PROJECT_DIR$/src/data-actions/add-party.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/add-party.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data-actions/edit-character.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/edit-character.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data-actions/edit-party.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/edit-party.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data-actions/remove-character.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/remove-character.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data-actions/remove-party.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/remove-party.ts" afterDir="false" />
+    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="reload everytime data changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/app-sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/app-sidebar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,14 +88,6 @@
       <workItem from="1732296779065" duration="109000" />
       <workItem from="1732296892149" duration="14752000" />
       <workItem from="1732533776904" duration="15473000" />
-    </task>
-    <task id="LOCAL-00009" summary="another reminder">
-      <option name="closed" value="true" />
-      <created>1732544321861</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1732544321861</updated>
     </task>
     <task id="LOCAL-00010" summary="styling">
       <option name="closed" value="true" />
@@ -484,7 +473,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732788864195</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="reload everytime data changes">
+      <option name="closed" value="true" />
+      <created>1732788918510</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1732788918511</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,7 +499,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: using date.now as id" />
     <MESSAGE value="feat: basic character item styling" />
     <MESSAGE value="feat: add option to edit char" />
     <MESSAGE value="wip: structure to get parties created" />
@@ -527,6 +523,7 @@
     <MESSAGE value="updated publish" />
     <MESSAGE value="fix: navigation" />
     <MESSAGE value="fix: bg color" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: bg color" />
+    <MESSAGE value="reload everytime data changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="reload everytime data changes" />
   </component>
 </project>
