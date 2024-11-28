@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import DeleteCharacterConfirmDialog from "../../components/delete-character-confirm-dialog";
 import getCharacters from "../../data-actions/get-characters";
 import CharacterDialog from "../../components/character-dialog";
 import {
@@ -58,7 +59,9 @@ const CharactersPage = () => {
             <CharacterDialog character={character}>
               <Button variant={"outline"}>Edit</Button>
             </CharacterDialog>
-            <Button variant={"outline"}>Remove</Button>
+            <DeleteCharacterConfirmDialog characterId={character.id}>
+              <Button variant={"outline"}>Remove</Button>
+            </DeleteCharacterConfirmDialog>
           </div>
         </div>
       ))}

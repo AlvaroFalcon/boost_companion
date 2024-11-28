@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import DeletePartyConfirmDialog from "../../components/delete-party-confirm-dialog";
 import getCharacters from "../../data-actions/get-characters";
 import getParties from "../../data-actions/get-parties";
 import PartyDialog from "../../components/party-dialog";
@@ -61,7 +62,9 @@ const PartyPage = () => {
               <PartyDialog party={party} characters={characters}>
                 <Button variant={"outline"}>Edit</Button>
               </PartyDialog>
-              <Button variant={"outline"}>Remove</Button>
+              <DeletePartyConfirmDialog partyId={party.id}>
+                <Button variant={"outline"}>Remove</Button>
+              </DeletePartyConfirmDialog>
             </div>
           </div>
         );

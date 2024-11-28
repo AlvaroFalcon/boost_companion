@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import getCharacters from "../data-actions/get-characters";
 import getParties from "../data-actions/get-parties";
-import CopyMessageButton from "../components/CopyMessageButton";
+import CopyMessageButton from "../components/copy-message-button";
 import {
   Accordion,
   AccordionContent,
