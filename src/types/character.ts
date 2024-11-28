@@ -48,7 +48,6 @@ const ImportDataSchema = z.object({
 });
 
 const PartiesSchema = z.array(PartySchema);
-
 const CharactersSchema = z.array(CharacterSchema);
 
 export type KeystoneName = z.infer<typeof KeystoneNameSchema>;
@@ -74,6 +73,7 @@ export const decodeCharacters = (data: string): Character[] => {
   try {
     const decodedString = atob(data);
     const parsedData = JSON.parse(decodedString);
+    console.log(parsedData, "parsedData");
     return CharactersSchema.parse(parsedData);
   } catch (error) {
     console.error("Failed to decode and validate characters:", error);
