@@ -9,6 +9,7 @@ const editParty = (party: Party) => {
   if (index === -1) return;
   parties[index] = party;
   localStorage.setItem(PARTIES_COOKIES_KEY, JSON.stringify(parties));
+  window.location.reload();
 };
 
 export default editParty;

@@ -9,6 +9,7 @@ const removeCharacter = (character: Character) => {
     "characters",
     JSON.stringify(characters.filter((c) => c.id !== character.id)),
   );
+  window.location.reload();
 };
 
 export default removeCharacter;

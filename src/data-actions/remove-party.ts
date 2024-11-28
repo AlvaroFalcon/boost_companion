@@ -6,4 +6,5 @@ const removeParty = (partyId: string) => {
   const parties = getParties();
   const newParties = parties.filter((party) => party.id !== partyId);
   localStorage.setItem(PARTIES_COOKIES_KEY, JSON.stringify(newParties));
+  window.location.reload();
 };

@@ -12,6 +12,7 @@ const editCharacter = (characterToEdit: Character) => {
   if (index === -1) return;
   characters[index] = characterToEdit;
   localStorage.setItem(CHARACTER_COOKIES_KEY, JSON.stringify(characters));
+  window.location.reload();
 };
 
 export default editCharacter;

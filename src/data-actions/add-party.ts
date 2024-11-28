@@ -8,6 +8,7 @@ const addParty = (partyToAdd: Party) => {
   if (parties.find((party) => partyToAdd.partyName === party.partyName)) return;
   parties.push(partyToAdd);
   localStorage.setItem(PARTIES_COOKIES_KEY, JSON.stringify(parties));
+  window.location.reload();
 };
 
 export default addParty;
