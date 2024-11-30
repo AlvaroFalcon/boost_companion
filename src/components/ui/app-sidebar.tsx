@@ -10,7 +10,12 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { DashboardIcon } from "@radix-ui/react-icons";
-import { CircleDollarSign, UserRoundPen, Users } from "lucide-react";
+import {
+  CircleDollarSign,
+  MessageCircleDashed,
+  UserRoundPen,
+  Users,
+} from "lucide-react";
 import Link from "next/link";
 import { Label } from "./label";
 
@@ -37,6 +42,12 @@ const items = [
     title: "Boosts",
     url: "/boosts",
     icon: CircleDollarSign,
+    enabled: false,
+  },
+  {
+    title: "Message Templates",
+    url: "/msg-templates",
+    icon: MessageCircleDashed,
     enabled: false,
   },
 ];

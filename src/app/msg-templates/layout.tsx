@@ -14,25 +14,20 @@ const Layout = ({
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
-  const [characters, setCharacters] = useState<AppTypes[]>([]);
-  useEffect(() => {
-    setCharacters(getCharacters());
-  }, []);
+  const [templates, setTemplates] = useState<string[]>([]);
+  useEffect(() => {}, []);
   return (
     <div className={"flex flex-col"}>
       <AppBar>
         <div className={"flex gap-2"}>
           <ImportCharactersDialog>
             <Button variant={"ghost"}>
-              <span>Import characters</span>
+              <span>Import templates</span>
               <Import />
             </Button>
           </ImportCharactersDialog>
-          <Button
-            variant={"ghost"}
-            onClick={() => exportCharacters(characters)}
-          >
-            <span>Export characters</span>
+          <Button variant={"ghost"}>
+            <span>Export templates</span>
             <Copy />
           </Button>
           <CharacterDialog>

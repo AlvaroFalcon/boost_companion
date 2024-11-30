@@ -1,4 +1,4 @@
-import { CharacterClass } from "./character";
+import { CharacterClass } from "./app-types";
 
 export const Paladin: CharacterClass = {
   className: "Paladin",

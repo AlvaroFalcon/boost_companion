@@ -12,10 +12,10 @@ import {
 } from "../../components/ui/accordion";
 import { Button } from "../../components/ui/button";
 import { Label } from "../../components/ui/label";
-import { Character } from "../../types/character";
+import { AppTypes } from "../../types/app-types";
 
 const CharactersPage = () => {
-  const [characters, setCharacters] = useState<Character[]>([]);
+  const [characters, setCharacters] = useState<AppTypes[]>([]);
   useEffect(() => {
     setCharacters(getCharacters());
   }, []);

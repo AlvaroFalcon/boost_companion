@@ -12,11 +12,11 @@ import {
 } from "../components/ui/accordion";
 import AppBar from "../components/ui/app-bar";
 import { Label } from "../components/ui/label";
-import { Character, Party } from "../types/character";
+import { AppTypes, Party } from "../types/app-types";
 
 const HomePage = () => {
   const [parties, setParties] = useState<Party[]>([]);
-  const [characters, setCharacters] = useState<Character[]>([]);
+  const [characters, setCharacters] = useState<AppTypes[]>([]);
   useEffect(() => {
     setParties(getParties());
     setCharacters(getCharacters());

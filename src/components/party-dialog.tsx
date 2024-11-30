@@ -2,7 +2,7 @@
 import React from "react";
 import addParty from "../data-actions/add-party";
 import editParty from "../data-actions/edit-party";
-import { Character, Party } from "../types/character";
+import { AppTypes, Party } from "../types/app-types";
 import { Button } from "./ui/button";
 import {
   Dialog,
@@ -20,7 +20,7 @@ import { ToggleGroup, ToggleGroupItem } from "./ui/toggle-group";
 
 type Props = {
   children: React.ReactNode;
-  characters: Character[];
+  characters: AppTypes[];
   party?: Party;
 };
 

@@ -3,12 +3,12 @@
 import { ClipboardCopyIcon } from "lucide-react";
 import { toast } from "../hooks/use-toast";
 import { buildPartyMessage } from "../lib/utils";
-import { Character, Party } from "../types/character";
+import { AppTypes, Party } from "../types/app-types";
 import { Button } from "./ui/button";
 
 type Props = {
   party: Party;
-  characters: Character[];
+  characters: AppTypes[];
 };
 const CopyMessageButton = (props: Props) => {
   const { party, characters } = props;

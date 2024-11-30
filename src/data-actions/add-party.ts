@@ -1,6 +1,6 @@
 "use client";
 import { PARTIES_COOKIES_KEY } from "../lib/cookies-keys";
-import { Party } from "../types/character";
+import { Party } from "../types/app-types";
 import getParties from "./get-parties";
 
 const addParty = (partyToAdd: Party) => {

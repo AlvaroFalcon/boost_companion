@@ -36,10 +36,17 @@ const CharacterSchema = z.object({
   key: MythicKeystoneSchema,
 });
 
+const TemplateSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  template: z.string(),
+});
+
 const PartySchema = z.object({
   id: z.string(),
   partyName: z.string(),
   partyMemberIds: z.array(z.string()),
+  template: TemplateSchema,
 });
 
 const ImportDataSchema = z.object({
@@ -49,14 +56,16 @@ const ImportDataSchema = z.object({
 
 const PartiesSchema = z.array(PartySchema);
 const CharactersSchema = z.array(CharacterSchema);
+const TemplatesSchema = z.array(TemplateSchema);
 
 export type KeystoneName = z.infer<typeof KeystoneNameSchema>;
 export type CharacterSpec = z.infer<typeof CharacterSpecSchema>;
 export type CharacterClass = z.infer<typeof CharacterClassSchema>;
 export type MythicKeystone = z.infer<typeof MythicKeystoneSchema>;
-export type Character = z.infer<typeof CharacterSchema>;
+export type AppTypes = z.infer<typeof CharacterSchema>;
 export type Party = z.infer<typeof PartySchema>;
 export type ImportData = z.infer<typeof ImportDataSchema>;
+export type Template = z.infer<typeof TemplateSchema>;
 
 export const decodeParties = (data: string): Party[] => {
   try {
@@ -69,11 +78,10 @@ export const decodeParties = (data: string): Party[] => {
   }
 };
 
-export const decodeCharacters = (data: string): Character[] => {
+export const decodeCharacters = (data: string): AppTypes[] => {
   try {
     const decodedString = atob(data);
     const parsedData = JSON.parse(decodedString);
-    console.log(parsedData, "parsedData");
     return CharactersSchema.parse(parsedData);
   } catch (error) {
     console.error("Failed to decode and validate characters:", error);
@@ -88,6 +96,17 @@ export const decodeImportData = (data: string): ImportData => {
     return ImportDataSchema.parse(parsedData);
   } catch (error) {
     console.error("Failed to decode and validate import data:", error);
+    throw error;
+  }
+};
+
+export const decodeTemplates = (data: string): Template[] => {
+  try {
+    const decodedString = atob(data);
+    const parsedData = JSON.parse(decodedString);
+    return TemplatesSchema.parse(parsedData);
+  } catch (error) {
+    console.error("Failed to decode and validate templates:", error);
     throw error;
   }
 };

@@ -1,6 +1,6 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { Character, CharacterSpec, Party } from "../types/character";
+import { AppTypes, CharacterSpec, Party } from "../types/app-types";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -41,7 +41,7 @@ const messageSignTemplate = "$amount_take \n";
 const singleTemplate =
   "$class_icon $roles $class | $rio RIO | :keystone_nova: $key\n";
 
-export const buildPartyMessage = (party: Party, characters: Character[]) => {
+export const buildPartyMessage = (party: Party, characters: AppTypes[]) => {
   let message = "";
   const partyCharacters = characters.filter((character) =>
     party.partyMemberIds.includes(character.id),
@@ -54,7 +54,7 @@ export const buildPartyMessage = (party: Party, characters: Character[]) => {
       acc[character.discordTag].push(character);
       return acc;
     },
-    {} as Record<string, Character[]>,
+    {} as Record<string, AppTypes[]>,
   );
   const discordTags = Object.keys(charactersPerDiscordTag);
   message = message.concat(
