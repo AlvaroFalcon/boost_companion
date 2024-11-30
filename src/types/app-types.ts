@@ -39,6 +39,10 @@ const CharacterSchema = z.object({
 const TemplateSchema = z.object({
   id: z.string(),
   name: z.string(),
+  tankIcon: z.string(),
+  healerIcon: z.string(),
+  dpsIcon: z.string(),
+  keyIcon: z.string(),
   template: z.string(),
 });
 
@@ -46,7 +50,7 @@ const PartySchema = z.object({
   id: z.string(),
   partyName: z.string(),
   partyMemberIds: z.array(z.string()),
-  template: TemplateSchema,
+  template: TemplateSchema.optional(),
 });
 
 const ImportDataSchema = z.object({

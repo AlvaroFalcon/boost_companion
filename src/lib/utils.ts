@@ -1,6 +1,7 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { AppTypes, CharacterSpec, Party } from "../types/app-types";
+import { Nova } from "../types/default-templates";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -11,11 +12,11 @@ const signAmountTemplate = (amount: number) => {
     case 1:
       return "";
     case 2:
-      return "DUO TAKE";
+      return "Duo";
     case 3:
-      return "TRIO TAKE";
+      return "Trio";
     case 4:
-      return "QUAD TAKE";
+      return "Quad";
     default:
       throw new Error("Invalid amount of members in party");
   }
@@ -38,8 +39,7 @@ const getAllSpecIcons = (specs: CharacterSpec[]) => {
 };
 
 const messageSignTemplate = "$amount_take \n";
-const singleTemplate =
-  "$class_icon $roles $class | $rio RIO | :keystone_nova: $key\n";
+const defaultTemplate = `${Nova} \n`;
 
 export const buildPartyMessage = (party: Party, characters: AppTypes[]) => {
   let message = "";
@@ -72,7 +72,7 @@ export const buildPartyMessage = (party: Party, characters: AppTypes[]) => {
         message = message.concat("OR\n");
       }
       message = message.concat(
-        singleTemplate
+        defaultTemplate
           .replace("$class_icon", getAllSpecIcons(character.specs))
           .replace(
             "$roles",

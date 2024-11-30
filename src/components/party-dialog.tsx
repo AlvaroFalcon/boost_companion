@@ -3,6 +3,7 @@ import React from "react";
 import addParty from "../data-actions/add-party";
 import editParty from "../data-actions/edit-party";
 import { AppTypes, Party } from "../types/app-types";
+import { TemplateSelectOptions } from "../types/template-select-options";
 import { Button } from "./ui/button";
 import {
   Dialog,
@@ -16,6 +17,13 @@ import {
 } from "./ui/dialog";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "./ui/select";
 import { ToggleGroup, ToggleGroupItem } from "./ui/toggle-group";
 
 type Props = {
@@ -40,12 +48,20 @@ const PartyDialog = (props: Props) => {
 
   const handleSubmit = () => {
     if (party) {
-      console.log("editing");
       editParty(partyToEdit);
       return;
     }
-    console.log("adding");
     addParty(partyToEdit);
+  };
+
+  const handleTemplateChange = (value: string) => {
+    const template = TemplateSelectOptions.find(
+      (option) => option.template.name === value,
+    );
+    setPartyToEdit({
+      ...partyToEdit,
+      template: template?.template,
+    });
   };
 
   const handleToggle = (value: string[]) => {
@@ -85,6 +101,23 @@ const PartyDialog = (props: Props) => {
               }
               defaultValue={partyToEdit.partyName}
             />
+          </div>
+          <div className="grid gap-4 py-4">
+            <Select
+              defaultValue={partyToEdit.template?.name || "Nova"}
+              onValueChange={handleTemplateChange}
+            >
+              <SelectTrigger>
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                {TemplateSelectOptions.map((option) => (
+                  <SelectItem key={option.label} value={option.template.name}>
+                    {option.label}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </div>
           <div className={"w-full"}>
             <ToggleGroup

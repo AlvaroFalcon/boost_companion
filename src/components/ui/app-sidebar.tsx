@@ -44,12 +44,6 @@ const items = [
     icon: CircleDollarSign,
     enabled: false,
   },
-  {
-    title: "Message Templates",
-    url: "/msg-templates",
-    icon: MessageCircleDashed,
-    enabled: false,
-  },
 ];
 
 export function AppSidebar() {

@@ -21,14 +21,18 @@ type Props = {
 };
 
 const defaultTemplate = (): Template => ({
-  id: "",
+  id: Date.now().toString(),
   name: "",
-  template: "",
+  template: "$class_icon $roles $class | $rio RIO | :keystone_nova: $key",
+  keyIcon: "keystone_nova",
+  dpsIcon: ":nova_dps:",
+  healerIcon: ":nova_healer:",
+  tankIcon: ":nova_tank:",
 });
 
-const CharacterDialog = (props: Props) => {
+const TemplateDialog = (props: Props) => {
   const { children, template } = props;
-  const [templateToEdit, setTemplateToEdit] = React.useState<string>(
+  const [templateToEdit, setTemplateToEdit] = React.useState<Template>(
     template || defaultTemplate(),
   );
 
@@ -38,7 +42,9 @@ const CharacterDialog = (props: Props) => {
 
   return (
     <Dialog
-      onOpenChange={(open) => (open ? setTemplateToEdit(template || "") : null)}
+      onOpenChange={(open) =>
+        open ? setTemplateToEdit(template || defaultTemplate()) : null
+      }
     >
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
@@ -52,67 +58,103 @@ const CharacterDialog = (props: Props) => {
           <div className="grid grid-cols-4 items-center gap-4">
             <Label className="text-right">Template name</Label>
             <Input
-              id="character-name"
+              id="template-name"
               className="col-span-3"
               onChange={(event) =>
-                setCharacterToEdit({
-                  ...characterToEdit,
-                  characterName: event.currentTarget.value,
+                setTemplateToEdit({
+                  ...templateToEdit,
+                  name: event.currentTarget.value,
                 })
               }
-              defaultValue={characterToEdit.characterName}
+              defaultValue={templateToEdit.name}
             />
           </div>
         </div>
         <div className="grid gap-4 py-4">
           <div className="grid grid-cols-4 items-center gap-4">
-            <Label className="text-right">Template name</Label>
+            <Label className="text-right">Template</Label>
             <Input
-              id="character-name"
+              id="template-str"
               className="col-span-3"
               onChange={(event) =>
-                setCharacterToEdit({
-                  ...characterToEdit,
-                  characterName: event.currentTarget.value,
+                setTemplateToEdit({
+                  ...templateToEdit,
+                  template: event.currentTarget.value,
                 })
               }
-              defaultValue={characterToEdit.characterName}
-            />
-          </div>
-        </div>
-        <div className="grid gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="username" className="text-right">
-              Template name
-            </Label>
-            <Input
-              id="character-name"
-              className="col-span-3"
-              onChange={(event) =>
-                setCharacterToEdit({
-                  ...characterToEdit,
-                  characterName: event.currentTarget.value,
-                })
-              }
-              defaultValue={characterToEdit.characterName}
+              defaultValue={templateToEdit.template}
             />
           </div>
         </div>
         <div className="grid gap-4 py-4">
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="username" className="text-right">
-              Template name
+              Tank icon
             </Label>
             <Input
-              id="character-name"
+              id="tank-icon"
               className="col-span-3"
               onChange={(event) =>
-                setCharacterToEdit({
-                  ...characterToEdit,
-                  characterName: event.currentTarget.value,
+                setTemplateToEdit({
+                  ...templateToEdit,
+                  tankIcon: event.currentTarget.value,
                 })
               }
-              defaultValue={characterToEdit.characterName}
+              defaultValue={templateToEdit.tankIcon}
+            />
+          </div>
+        </div>
+        <div className="grid gap-4 py-4">
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="username" className="text-right">
+              Healer icon
+            </Label>
+            <Input
+              id="heal-icon"
+              className="col-span-3"
+              onChange={(event) =>
+                setTemplateToEdit({
+                  ...templateToEdit,
+                  healerIcon: event.currentTarget.value,
+                })
+              }
+              defaultValue={templateToEdit.healerIcon}
+            />
+          </div>
+        </div>
+        <div className="grid gap-4 py-4">
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="username" className="text-right">
+              Dps icon
+            </Label>
+            <Input
+              id="dps-icon"
+              className="col-span-3"
+              onChange={(event) =>
+                setTemplateToEdit({
+                  ...templateToEdit,
+                  dpsIcon: event.currentTarget.value,
+                })
+              }
+              defaultValue={templateToEdit.healerIcon}
+            />
+          </div>
+        </div>
+        <div className="grid gap-4 py-4">
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="username" className="text-right">
+              Key icon
+            </Label>
+            <Input
+              id="key-icon"
+              className="col-span-3"
+              onChange={(event) =>
+                setTemplateToEdit({
+                  ...templateToEdit,
+                  keyIcon: event.currentTarget.value,
+                })
+              }
+              defaultValue={templateToEdit.healerIcon}
             />
           </div>
         </div>
@@ -128,4 +170,4 @@ const CharacterDialog = (props: Props) => {
   );
 };
 
-export default CharacterDialog;
+export default TemplateDialog;

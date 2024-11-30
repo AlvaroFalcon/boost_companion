@@ -4,33 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="feat: import all data">
-      <change afterPath="$PROJECT_DIR$/src/app/msg-templates/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/msg-templates/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/template-msg-dialog.tsx" afterDir="false" />
+    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="refactor: renaming few things and adding templates">
+      <change afterPath="$PROJECT_DIR$/src/types/default-templates.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/template-select-options.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/characters/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/characters/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/characters/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/characters/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/party/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/party/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/party/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/party/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/character-dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/character-dialog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/copy-message-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/copy-message-button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/msg-templates/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/msg-templates/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/party-dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/party-dialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/template-msg-dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-msg-dialog.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/app-sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/app-sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data-actions/add-character.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/add-character.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data-actions/add-party.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/add-party.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data-actions/edit-character.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/edit-character.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data-actions/edit-party.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/edit-party.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data-actions/get-characters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/get-characters.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data-actions/get-parties.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/get-parties.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data-actions/store-imported-characters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/store-imported-characters.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data-actions/store-imported-parties.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-actions/store-imported-parties.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/importer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/importer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/character.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/app-types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/class-select-options.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/class-select-options.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/classes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/classes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/app-types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/app-types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -65,7 +48,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/alvaro/Documents/Proyectos/booster-companion/src/components",
+    "last_opened_file_path": "/Users/alvaro/Documents/Proyectos/booster-companion/src/types",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -78,6 +61,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/types" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/app/msg-templates" />
       <recent name="$PROJECT_DIR$/src/app/party" />
@@ -113,14 +97,6 @@
       <workItem from="1732296779065" duration="109000" />
       <workItem from="1732296892149" duration="14752000" />
       <workItem from="1732533776904" duration="15473000" />
-    </task>
-    <task id="LOCAL-00020" summary="feat: add missing classes">
-      <option name="closed" value="true" />
-      <created>1732712484634</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1732712484634</updated>
     </task>
     <task id="LOCAL-00021" summary="feat: copying proper message">
       <option name="closed" value="true" />
@@ -506,7 +482,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732807080744</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="refactor: renaming few things and adding templates">
+      <option name="closed" value="true" />
+      <created>1732928071343</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1732928071343</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,7 +508,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: workflow to create tauri versions" />
     <MESSAGE value="changed version" />
     <MESSAGE value="changed identifier" />
     <MESSAGE value="updated workflow" />
@@ -549,6 +532,7 @@
     <MESSAGE value="feat: logic to import characters" />
     <MESSAGE value="fix: remove character from parties and copy message icon" />
     <MESSAGE value="feat: import all data" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: import all data" />
+    <MESSAGE value="refactor: renaming few things and adding templates" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: renaming few things and adding templates" />
   </component>
 </project>

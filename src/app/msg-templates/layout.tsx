@@ -3,6 +3,7 @@ import { Copy, Import, Plus } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import CharacterDialog from "../../components/character-dialog";
 import ImportCharactersDialog from "../../components/import-characters-dialog";
+import TemplateDialog from "../../components/template-msg-dialog";
 import AppBar from "../../components/ui/app-bar";
 import { Button } from "../../components/ui/button";
 import getCharacters from "../../data-actions/get-characters";
@@ -20,22 +21,12 @@ const Layout = ({
     <div className={"flex flex-col"}>
       <AppBar>
         <div className={"flex gap-2"}>
-          <ImportCharactersDialog>
-            <Button variant={"ghost"}>
-              <span>Import templates</span>
-              <Import />
-            </Button>
-          </ImportCharactersDialog>
-          <Button variant={"ghost"}>
-            <span>Export templates</span>
-            <Copy />
-          </Button>
-          <CharacterDialog>
+          <TemplateDialog>
             <Button variant={"ghost"}>
               <span>Add</span>
               <Plus />
             </Button>
-          </CharacterDialog>
+          </TemplateDialog>
         </div>
       </AppBar>
       {children}
