@@ -14,8 +14,8 @@ export const Oblivion: Template = {
   id: "oblivion",
   name: "Oblivion",
   template: "$class_icon $roles $class | $rio RIO | :keystone_oblivion:",
-  tankIcon: ":tank_oblivion:",
-  healerIcon: ":healer_oblivion:",
-  dpsIcon: ":dps_oblivion:",
-  keyIcon: ":keystone_oblivion:",
+  tankIcon: ":tank:",
+  healerIcon: ":heal:",
+  dpsIcon: ":dps:",
+  keyIcon: ":keystone:",
 };

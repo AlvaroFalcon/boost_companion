@@ -39,10 +39,11 @@ const getAllSpecIcons = (specs: CharacterSpec[]) => {
 };
 
 const messageSignTemplate = "$amount_take \n";
-const defaultTemplate = `${Nova} \n`;
+const defaultTemplate = Nova.template;
 
 export const buildPartyMessage = (party: Party, characters: AppTypes[]) => {
   let message = "";
+  const template = party.template?.template || Nova.template;
   const partyCharacters = characters.filter((character) =>
     party.partyMemberIds.includes(character.id),
   );
@@ -66,13 +67,14 @@ export const buildPartyMessage = (party: Party, characters: AppTypes[]) => {
 
   discordTags.forEach((discordTag) => {
     const characters = charactersPerDiscordTag[discordTag];
-    message = message.concat(`${discordTag}: \n`);
+    if (characters.length > 1 && discordTags.length > 1)
+      message = message.concat(`${discordTag}: \n`);
     characters.forEach((character, index) => {
       if (index !== 0) {
         message = message.concat("OR\n");
       }
       message = message.concat(
-        defaultTemplate
+        template
           .replace("$class_icon", getAllSpecIcons(character.specs))
           .replace(
             "$roles",
@@ -82,6 +84,9 @@ export const buildPartyMessage = (party: Party, characters: AppTypes[]) => {
           .replace("$rio", character.rio)
           .replace("$key", `${character.key.name}+${character.key.level}`),
       );
+      if (characters.length === 1 && discordTags.length > 1)
+        message = message.concat(`${discordTag}`);
+      message.concat("\n");
     });
   });
   return message;
