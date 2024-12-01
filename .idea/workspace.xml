@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="feat: save msg template in party properly">
+    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="feat: functional oblivion and nova templates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/default-templates.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/default-templates.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,14 +90,6 @@
       <workItem from="1732296779065" duration="109000" />
       <workItem from="1732296892149" duration="14752000" />
       <workItem from="1732533776904" duration="15473000" />
-    </task>
-    <task id="LOCAL-00022" summary="feat: styling a bit">
-      <option name="closed" value="true" />
-      <created>1732719922662</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1732719922662</updated>
     </task>
     <task id="LOCAL-00023" summary="feat: changed colors to match a better design">
       <option name="closed" value="true" />
@@ -484,7 +475,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733010119679</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="feat: functional oblivion and nova templates">
+      <option name="closed" value="true" />
+      <created>1733054687630</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1733054687630</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,7 +501,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed identifier" />
     <MESSAGE value="updated workflow" />
     <MESSAGE value="update package json path" />
     <MESSAGE value="update workflow" />
@@ -527,6 +525,7 @@
     <MESSAGE value="feat: import all data" />
     <MESSAGE value="refactor: renaming few things and adding templates" />
     <MESSAGE value="feat: save msg template in party properly" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: save msg template in party properly" />
+    <MESSAGE value="feat: functional oblivion and nova templates" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: functional oblivion and nova templates" />
   </component>
 </project>
