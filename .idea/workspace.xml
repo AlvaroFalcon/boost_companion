@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="feat: use correct spec icons and keystone for each template">
-      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/app-types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/app-types.ts" afterDir="false" />
+    <list default="true" id="6e6c790e-babd-48ba-98a9-8b380d7dbb5e" name="Changes" comment="fix: type name">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/party-dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/party-dialog.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,14 +90,6 @@
       <workItem from="1732296779065" duration="109000" />
       <workItem from="1732296892149" duration="14752000" />
       <workItem from="1732533776904" duration="15473000" />
-    </task>
-    <task id="LOCAL-00025" summary="changed version">
-      <option name="closed" value="true" />
-      <created>1732721458578</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1732721458578</updated>
     </task>
     <task id="LOCAL-00026" summary="changed identifier">
       <option name="closed" value="true" />
@@ -483,7 +475,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733136062843</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="fix: type name">
+      <option name="closed" value="true" />
+      <created>1733136414020</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1733136414020</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,7 +501,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update workflow" />
     <MESSAGE value="prepare web instead of tauri" />
     <MESSAGE value="fix typo" />
     <MESSAGE value="updated publish action" />
@@ -526,6 +525,7 @@
     <MESSAGE value="feat: functional oblivion and nova templates" />
     <MESSAGE value="fix: template missing key" />
     <MESSAGE value="feat: use correct spec icons and keystone for each template" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: use correct spec icons and keystone for each template" />
+    <MESSAGE value="fix: type name" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: type name" />
   </component>
 </project>

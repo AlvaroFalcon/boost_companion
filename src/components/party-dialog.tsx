@@ -86,10 +86,8 @@ const PartyDialog = (props: Props) => {
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="party-name" className="text-right">
-              Party name
-            </Label>
+          <div className="grid  items-center gap-4">
+            <Label htmlFor="party-name">Party name</Label>
             <Input
               id="character-name"
               className="col-span-3"
@@ -103,6 +101,7 @@ const PartyDialog = (props: Props) => {
             />
           </div>
           <div className="grid gap-4 py-4">
+            <Label>Message template</Label>
             <Select
               defaultValue={partyToEdit.template?.name || "Nova"}
               onValueChange={handleTemplateChange}
