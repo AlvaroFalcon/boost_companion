@@ -94,7 +94,7 @@ export const buildPartyMessage = (party: Party, characters: Character[]) => {
           .replace("$rio", character.rio)
           .replace(
             "$key",
-            `${party.template?.keyIcon} ${character.key.name}+${character.key.level}`,
+            `${party.template?.keyIcon || Nova.keyIcon} ${character.key.name}+${character.key.level}`,
           ),
       );
       if (characters.length === 1 && discordTags.length > 1)
