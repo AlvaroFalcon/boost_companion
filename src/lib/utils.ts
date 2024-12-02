@@ -1,6 +1,7 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { AppTypes, CharacterSpec, Party } from "../types/app-types";
+import { ZodString } from "zod";
+import { AppTypes, CharacterSpec, Party, Template } from "../types/app-types";
 import { Nova } from "../types/default-templates";
 
 export function cn(...inputs: ClassValue[]) {
@@ -22,20 +23,26 @@ const signAmountTemplate = (amount: number) => {
   }
 };
 
-const getProperSpecIcon = (spec: CharacterSpec) => {
+const getProperSpecIcon = (
+  spec: CharacterSpec,
+  template: Template | undefined,
+) => {
   switch (spec.specName) {
     case "Tank":
-      return ":tank_nova:";
+      return template?.tankIcon || ":tank_nova:";
     case "Healer":
-      return ":healer_nova:";
+      return template?.healerIcon || ":healer_nova:";
     case "Dps":
-      return ":dps_nova:";
+      return template?.dpsIcon || ":dps_nova:";
     default:
       throw new Error("Invalid spec name");
   }
 };
-const getAllSpecIcons = (specs: CharacterSpec[]) => {
-  return specs.map((spec) => getProperSpecIcon(spec)).join(" ");
+const getAllSpecIcons = (
+  specs: CharacterSpec[],
+  template: Template | undefined,
+) => {
+  return specs.map((spec) => getProperSpecIcon(spec, template)).join(" ");
 };
 
 const messageSignTemplate = "$amount_take \n";
@@ -75,14 +82,20 @@ export const buildPartyMessage = (party: Party, characters: AppTypes[]) => {
       }
       message = message.concat(
         template
-          .replace("$class_icon", getAllSpecIcons(character.specs))
+          .replace(
+            "$class_icon",
+            getAllSpecIcons(character.specs, party.template),
+          )
           .replace(
             "$roles",
             character.specs.map((spec) => spec.specName).join("/"),
           )
           .replace("$class", character.characterClass.className)
           .replace("$rio", character.rio)
-          .replace("$key", `${character.key.name}+${character.key.level}`),
+          .replace(
+            "$key",
+            `${party.template?.keyIcon} ${character.key.name}+${character.key.level}`,
+          ),
       );
       if (characters.length === 1 && discordTags.length > 1)
         message = message.concat(`${discordTag}`);

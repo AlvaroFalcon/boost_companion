@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Template } from "../types/app-types";
+import { Nova } from "../types/default-templates";
 import { Button } from "./ui/button";
 import {
   Dialog,
@@ -20,15 +21,7 @@ type Props = {
   template?: Template;
 };
 
-const defaultTemplate = (): Template => ({
-  id: Date.now().toString(),
-  name: "",
-  template: "$class_icon $roles $class | $rio RIO | :keystone_nova: $key",
-  keyIcon: "keystone_nova",
-  dpsIcon: ":nova_dps:",
-  healerIcon: ":nova_healer:",
-  tankIcon: ":nova_tank:",
-});
+const defaultTemplate = (): Template => Nova;
 
 const TemplateDialog = (props: Props) => {
   const { children, template } = props;
