@@ -4,7 +4,7 @@ import storeImportedCharacters from "../data-actions/store-imported-characters";
 import storeImportedParties from "../data-actions/store-imported-parties";
 import { toast } from "../hooks/use-toast";
 import {
-  AppTypes,
+  Character,
   decodeCharacters,
   decodeImportData,
   Party,
@@ -16,7 +16,7 @@ export const encodeData = (data: unknown): string => {
 
 export const exportPartiesAndCharacters = (
   parties: Party[],
-  characters: AppTypes[],
+  characters: Character[],
 ) => {
   const encodedString = encodeData({ parties, characters });
   navigator.clipboard.writeText(encodedString);
@@ -25,7 +25,7 @@ export const exportPartiesAndCharacters = (
   });
 };
 
-export const exportCharacters = (characters: AppTypes[]) => {
+export const exportCharacters = (characters: Character[]) => {
   const encodedString = encodeData(characters);
   navigator.clipboard.writeText(encodedString);
   toast({
@@ -64,7 +64,7 @@ export const importParties = (importedParties: Party[]) => {
   });
 };
 
-const importCharacters = (importedCharacters: AppTypes[]) => {
+const importCharacters = (importedCharacters: Character[]) => {
   const characters = getCharacters();
   importedCharacters.forEach((importedCharacter) => {
     const index = characters.findIndex(

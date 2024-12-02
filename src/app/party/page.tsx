@@ -13,11 +13,11 @@ import {
 } from "../../components/ui/accordion";
 import { Button } from "../../components/ui/button";
 import { Label } from "../../components/ui/label";
-import { AppTypes, Party } from "../../types/app-types";
+import { Character, Party } from "../../types/app-types";
 
 const PartyPage = () => {
   const [parties, setParties] = useState<Party[]>([]);
-  const [characters, setCharacters] = useState<AppTypes[]>([]);
+  const [characters, setCharacters] = useState<Character[]>([]);
   useEffect(() => {
     setParties(getParties());
     setCharacters(getCharacters());

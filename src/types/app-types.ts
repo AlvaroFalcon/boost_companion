@@ -66,7 +66,7 @@ export type KeystoneName = z.infer<typeof KeystoneNameSchema>;
 export type CharacterSpec = z.infer<typeof CharacterSpecSchema>;
 export type CharacterClass = z.infer<typeof CharacterClassSchema>;
 export type MythicKeystone = z.infer<typeof MythicKeystoneSchema>;
-export type AppTypes = z.infer<typeof CharacterSchema>;
+export type Character = z.infer<typeof CharacterSchema>;
 export type Party = z.infer<typeof PartySchema>;
 export type ImportData = z.infer<typeof ImportDataSchema>;
 export type Template = z.infer<typeof TemplateSchema>;
@@ -82,7 +82,7 @@ export const decodeParties = (data: string): Party[] => {
   }
 };
 
-export const decodeCharacters = (data: string): AppTypes[] => {
+export const decodeCharacters = (data: string): Character[] => {
   try {
     const decodedString = atob(data);
     const parsedData = JSON.parse(decodedString);

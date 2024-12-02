@@ -1,7 +1,7 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { ZodString } from "zod";
-import { AppTypes, CharacterSpec, Party, Template } from "../types/app-types";
+import { Character, CharacterSpec, Party, Template } from "../types/app-types";
 import { Nova } from "../types/default-templates";
 
 export function cn(...inputs: ClassValue[]) {
@@ -48,7 +48,7 @@ const getAllSpecIcons = (
 const messageSignTemplate = "$amount_take \n";
 const defaultTemplate = Nova.template;
 
-export const buildPartyMessage = (party: Party, characters: AppTypes[]) => {
+export const buildPartyMessage = (party: Party, characters: Character[]) => {
   let message = "";
   const template = party.template?.template || Nova.template;
   const partyCharacters = characters.filter((character) =>
@@ -62,7 +62,7 @@ export const buildPartyMessage = (party: Party, characters: AppTypes[]) => {
       acc[character.discordTag].push(character);
       return acc;
     },
-    {} as Record<string, AppTypes[]>,
+    {} as Record<string, Character[]>,
   );
   const discordTags = Object.keys(charactersPerDiscordTag);
   message = message.concat(

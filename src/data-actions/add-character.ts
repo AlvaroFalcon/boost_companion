@@ -1,10 +1,10 @@
 "use client";
 
 import { CHARACTER_COOKIES_KEY } from "../lib/cookies-keys";
-import { AppTypes } from "../types/app-types";
+import { Character } from "../types/app-types";
 import getCharacters from "./get-characters";
 
-const addCharacter = (characterToEdit: AppTypes) => {
+const addCharacter = (characterToEdit: Character) => {
   const characters = getCharacters();
   if (
     characters.find(

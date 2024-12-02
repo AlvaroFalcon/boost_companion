@@ -7,14 +7,14 @@ import AppBar from "../../components/ui/app-bar";
 import { Button } from "../../components/ui/button";
 import getCharacters from "../../data-actions/get-characters";
 import { exportCharacters } from "../../lib/importer";
-import { AppTypes } from "../../types/app-types";
+import { Character } from "../../types/app-types";
 
 const Layout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
-  const [characters, setCharacters] = useState<AppTypes[]>([]);
+  const [characters, setCharacters] = useState<Character[]>([]);
   useEffect(() => {
     setCharacters(getCharacters());
   }, []);

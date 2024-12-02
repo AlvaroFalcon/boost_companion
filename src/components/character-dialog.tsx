@@ -2,7 +2,7 @@
 import React from "react";
 import addCharacter from "../data-actions/add-character";
 import editCharacter from "../data-actions/edit-character";
-import { AppTypes, CharacterSpec, KeystoneName } from "../types/app-types";
+import { Character, CharacterSpec, KeystoneName } from "../types/app-types";
 import { ClassSelectOptions } from "../types/class-select-options";
 import { getClassByName, Paladin } from "../types/classes";
 import { KeystoneSelectOptions } from "../types/keystone-select-options";
@@ -30,10 +30,10 @@ import {
 
 type Props = {
   children: React.ReactNode;
-  character?: AppTypes;
+  character?: Character;
 };
 
-const newCharacter = (): AppTypes => {
+const newCharacter = (): Character => {
   return {
     id: Date.now().toString(),
     characterName: "",
@@ -48,19 +48,19 @@ const newCharacter = (): AppTypes => {
   };
 };
 
-const hasAllowedSpec = (character: AppTypes, specName: string) => {
+const hasAllowedSpec = (character: Character, specName: string) => {
   return character.characterClass.allowedSpecs.some(
     (spec) => spec.specName === specName,
   );
 };
 
-const hasSpecSelected = (character: AppTypes, specName: string): boolean => {
+const hasSpecSelected = (character: Character, specName: string): boolean => {
   return character.specs.some((spec) => spec.specName === specName);
 };
 
 const CharacterDialog = (props: Props) => {
   const { children, character } = props;
-  const [characterToEdit, setCharacterToEdit] = React.useState<AppTypes>(
+  const [characterToEdit, setCharacterToEdit] = React.useState<Character>(
     character || newCharacter,
   );
 
