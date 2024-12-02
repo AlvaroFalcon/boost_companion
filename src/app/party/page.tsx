@@ -14,6 +14,7 @@ import {
 import { Button } from "../../components/ui/button";
 import { Label } from "../../components/ui/label";
 import { Character, Party } from "../../types/app-types";
+import { Nova } from "../../types/default-templates";
 
 const PartyPage = () => {
   const [parties, setParties] = useState<Party[]>([]);
@@ -40,6 +41,7 @@ const PartyPage = () => {
                   <AccordionTrigger>
                     <div className={"flex justify-between w-full"}>
                       <Label>{party.partyName}</Label>
+                      <Label>{party.template?.name || Nova.name}</Label>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent>
